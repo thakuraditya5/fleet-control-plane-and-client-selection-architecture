@@ -1,0 +1,37 @@
+# Configuration file for Intelligent Fleet Control Plane & Client Selection Simulation
+
+simulation:
+  fleet_size: 20                   # At least 20 dynamic edge nodes (EV clients)
+  num_rounds: 15                   # 15-20 federated training rounds
+  clients_per_round: 5             # Target clients sampled per round
+  seed: 42                         # Random seed for reproducibility across runs
+  dataset: "MNIST"                 # Image classification task
+  batch_size: 32                   # Edge batch size
+  local_epochs: 1                  # On-device training epochs per round
+  learning_rate: 0.01              # Local SGD learning rate
+
+model:
+  architecture: "EdgeCNN"
+  in_channels: 1
+  num_classes: 10
+
+telemetry:
+  battery_capacity_kwh: 75.0       # Standard commercial EV battery capacity (kWh)
+  training_energy_per_round_kwh: 0.025  # Simulated ECU compute energy per round
+  transmission_power_w: 5.0        # RF transceiver transmission power (Watts)
+
+guardrails:
+  power:
+    disallowed_states:
+      - "DISCHARGING"              # Disallow driving / off-grid discharging
+    min_battery_general: 50.0      # >= 50% battery for general (Level 2) charging
+    min_battery_dc_fast: 20.0      # >= 20% battery if on DC Fast Charging
+  network:
+    required_network_type: "UNMETERED_WIFI"  # Preserve metered cellular data
+    min_bandwidth_mbps: 10.0                 # High throughput threshold
+
+benchmarks:
+  strategies:
+    - "baseline_random"
+    - "constraint_aware"
+  output_dir: "./results"
