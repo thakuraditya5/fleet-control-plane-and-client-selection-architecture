@@ -1,14 +1,20 @@
 # Configuration file for Intelligent Fleet Control Plane & Client Selection Simulation
 
 simulation:
-  fleet_size: 20                   # At least 20 dynamic edge nodes (EV clients)
-  num_rounds: 15                   # 15-20 federated training rounds
-  clients_per_round: 5             # Target clients sampled per round
-  seed: 42                         # Random seed for reproducibility across runs
+  fleet_size: 20
+  num_rounds: 75
+  clients_per_round: 5
+  seed: 42
   dataset: "MNIST"                 # Image classification task
-  batch_size: 32                   # Edge batch size
-  local_epochs: 1                  # On-device training epochs per round
-  learning_rate: 0.01              # Local SGD learning rate
+  batch_size: 128
+  local_epochs: 1
+  learning_rate: 0.02
+  data_dir: "./data"
+  max_client_examples: 256
+  test_sample_size: 2000
+  torch_num_threads: 2
+  final_metric_rounds: 10
+  evaluation_interval: 5
 
 model:
   architecture: "EdgeCNN"
@@ -23,15 +29,114 @@ telemetry:
 guardrails:
   power:
     disallowed_states:
-      - "DISCHARGING"              # Disallow driving / off-grid discharging
-    min_battery_general: 50.0      # >= 50% battery for general (Level 2) charging
-    min_battery_dc_fast: 20.0      # >= 20% battery if on DC Fast Charging
+      - "DISCHARGING"
+    min_battery_general: 50.0
+    min_battery_dc_fast: 20.0
   network:
-    required_network_type: "UNMETERED_WIFI"  # Preserve metered cellular data
-    min_bandwidth_mbps: 10.0                 # High throughput threshold
+    required_network_type: "UNMETERED_WIFI"
+    min_bandwidth_mbps: 10.0
 
 benchmarks:
-  strategies:
-    - "baseline_random"
-    - "constraint_aware"
+  output_dir: "./results"
+
+study:
+  seeds: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61]
+  rho_values: [0.0, 0.25, 0.5, 0.75, 1.0]
+  policies: ["A", "B", "C", "D"]
+  p2p_policy: true
+  primary_base_policies: ["A", "B", "C", "D", "P2P"]
+  primary_base_rho_values: [0.0, 0.25, 0.5, 0.75, 1.0]
+  primary_extended_policies: ["E1", "E2", "F", "P2P-2"]
+  primary_extended_rho_values: [0.0, 0.5, 1.0]
+  sensitivity_seeds: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+  sensitivity_policies: ["A", "C", "E1", "F"]
+  sensitivity_rho: 1.0
+  primary_hypotheses:
+    H1:
+      statement: "At rho=1, C has lower worst-class and classes 5-9 accuracy than A."
+      paired_contrast: "C - A"
+      direction: "less for both outcomes"
+    H2:
+      statement: "At rho=1, realistic remedies E1 and F improve both worst-class and classes 5-9 accuracy versus C."
+      paired_contrast: "E1 - C and F - C"
+      direction: "greater for both outcomes"
+    H3:
+      statement: "At rho=1, B uses more metered MB and modeled kWh than C."
+      paired_contrast: "B - C"
+      direction: "greater for both resources"
+    H4:
+      statement: "At rho=1, C and D have more vehicles with fewer than 5 participation rounds than A."
+      paired_contrast: "C - A and D - A"
+      direction: "greater"
+  exploratory_comparisons:
+    - "All policies and rho values outside the four registered rho=1 hypotheses."
+    - "E2 oracle comparisons; P2P and P2P-2 comparisons; resource/accuracy tradeoffs."
+    - "Sensitivity sweeps and profile-level subgroup results."
+  pilot:
+    seeds: [42, 43]
+    rho_values: [1.0]
+    num_rounds: 10
+    policies: ["A", "B", "C", "D", "E1", "E2", "F", "P2P", "P2P-2"]
+  staleness_gate_bonus: 1000.0
+  bootstrap_resamples: 10000
+  workers: 2
+  resumable_run_dir: "./results/runs"
+  require_committed_config_for_full_run: true
+  threshold_sensitivity:
+    inactive_threshold_note: "Wi-Fi bandwidth and DC-fast battery threshold sweeps are omitted: current telemetry states make them inactive."
+  hypotheses:
+    - "Primary H1-H4 are frozen at rho=1 and paired against their stated baselines; all other comparisons are exploratory."
+  sensitivity:
+    profile_share: [0.25, 0.5, 0.75]
+    driving_dropout_probability: [0.25, 0.50, 0.75]
+    clients_per_round: [3, 5, 8]
+    policy_f_battery_threshold: [20.0, 30.0, 40.0]
+
+assumptions:
+  profile_share: 0.5
+  class_groups:
+    light_use: [0, 1, 2, 3, 4]
+    heavy_use: [5, 6, 7, 8, 9]
+  profile_class_allocation_weight:
+    favored: 4.5
+    non_favored: 0.5
+  non_iid_dirichlet_alpha: 0.8
+  availability_state_order: ["DRIVING", "CHARGING_WIFI", "CHARGING_METERED", "PARKED_WIFI"]
+  initial_state_probabilities:
+    heavy-use: [0.70, 0.10, 0.05, 0.15]
+    light-use: [0.15, 0.40, 0.10, 0.35]
+  availability_transition_matrices:
+    heavy-use:
+      - [0.75, 0.10, 0.05, 0.10]
+      - [0.35, 0.50, 0.05, 0.10]
+      - [0.50, 0.10, 0.30, 0.10]
+      - [0.45, 0.10, 0.05, 0.40]
+    light-use:
+      - [0.45, 0.30, 0.05, 0.20]
+      - [0.08, 0.68, 0.04, 0.20]
+      - [0.20, 0.25, 0.40, 0.15]
+      - [0.08, 0.38, 0.04, 0.50]
+  midround_dropout:
+    driving_probability: 0.50
+    critical_battery_pct: 25.0
+    low_battery_probability: 0.60
+    low_bandwidth_mbps: 8.0
+    poor_network_probability: 0.45
+  over_selection:
+    expected_survivors_target: 5
+    survival_floor_for_sizing: 0.05
+  policy_d:
+    staleness_bonus: 2.0
+  policy_f:
+    min_heavy_eligible: 2
+    fallback_battery_pct: 30.0
+  p2p:
+    pairs_per_round: 1
+    pairs_per_round_two: 2
+  model:
+    compute_energy_kwh_per_epoch: 0.025
+    transmission_power_w: 5.0
+    battery_capacity_kwh: 75.0
+  training_sample_cap_per_client: 256
+  test_sample_size: 2000
   output_dir: "./results"
