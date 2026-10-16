@@ -1,198 +1,99 @@
-# Intelligent Fleet Control Plane & Client Selection Architecture for EV Federated Learning
+# Availability-Aware Federated Learning Simulation
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![Framework: Flower](https://img.shields.io/badge/FL_Framework-Flower-yellow.svg)](https://flower.ai/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+This repository contains a synthetic experiment on EV client availability and selection bias. It compares random selection, random over-selection, guardrails, participation-aware aggregation, heavy-use fallback, and connectable peer-pair baselines while varying the association between vehicle usage profile and MNIST labels. Results describe this simulation under the assumptions below; they are not evidence about deployed vehicles or real-world federated learning systems.
 
-A lightweight, reproducible simulation framework based on the paper **"An On-Device Federated Learning Approach for Cooperative Model Update Between Edge Devices"**, implementing an **Intelligent Fleet Control Plane & Client Selection Architecture** for Electric Vehicle (EV) fleets.
+## Research Question
 
-The system simulates dynamic vehicle telemetry (battery charge, charging mode, compute energy, cellular vs. Wi-Fi connectivity) and enforces rule-based guardrails to prevent battery drain, eliminate costly cellular data transfer, and eliminate mid-round client dropouts.
+When vehicle availability is correlated with label distribution, do guardrails underweight classes 5-9 because heavy-use vehicles are less often eligible? Can staleness-aware selection or inverse-participation aggregation reduce that class-mass gap, and what resource cost does it impose?
 
----
+The base A-D/P2P experiment changes data-state coupling with $\rho \in \{0, 0.25, 0.5, 0.75, 1\}$. E1/E2/F/P2P-2 run at $\rho \in \{0, 0.5, 1\}$:
 
-## 🏛️ Architecture Overview
+- $\rho=0$: class allocation is independent of heavy-use/light-use profile.
+- $\rho=0.5$: half of each class allocation follows the profile tilt.
+- $\rho=1$: class allocation follows the profile tilt, favoring classes 5-9 for heavy-use vehicles and classes 0-4 for light-use vehicles.
 
-In an EV federated learning deployment, vehicle clients are highly dynamic edge nodes. Randomly selecting vehicles (the un-guarded baseline) causes critical issues:
-1. **Drive Power Degradation:** Training while driving or with low state-of-charge (SoC) drains range and triggers ECU safety overrides.
-2. **Expensive Cellular Costs:** Transmitting model weight updates over metered 4G/5G connections incurs high cellular network bills.
-3. **Mid-Round Dropouts:** Dynamic vehicle state transitions (driving off, handoffs, thermal throttling) cause failed updates and wasted server aggregation rounds.
+For each class, profile weights are 4.5 for a favored profile and 0.5 for the other profile, then normalized across clients. At $\rho=0$, an independent Dirichlet allocation with $\alpha=0.8$ is used.
 
-The **Intelligent Fleet Control Plane** queries vehicle telemetry prior to training assignment and executes strict **Power & Network Guardrails**.
+## Registered Hypotheses
 
-```mermaid
-flowchart TD
-    subgraph Fleet ["Dynamic EV Fleet (20+ Edge Nodes)"]
-        EV1["EV Client 01<br/>(LEVEL_2_CHARGING, 78% SoC, UNMETERED_WIFI)"]
-        EV2["EV Client 02<br/>(DISCHARGING, 45% SoC, METERED_4G)"]
-        EV3["EV Client 03<br/>(DC_FAST_CHARGING, 35% SoC, UNMETERED_WIFI)"]
-        EV4["EV Client 04<br/>(DISCHARGING, 18% SoC, CELLULAR_5G)"]
-        EVN["... EV Client N ..."]
-    end
+The primary family is frozen at $\rho=1$ and paired by seed against the stated baseline:
 
-    subgraph ControlPlane ["Intelligent Fleet Control Plane (Flower Server)"]
-        Telem["Telemetry Engine<br/>(src/telemetry.py)"]
-        Orch["Orchestrator Rule Guardrails<br/>(src/orchestrator.py)"]
-        Manager["EVClientManager<br/>(src/server.py)"]
-        Strategy["EVFedAvg Strategy<br/>(src/server.py)"]
-    end
+- **H1:** C has lower worst-class and classes 5-9 accuracy than A.
+- **H2:** E1 and F each improve both accuracy metrics versus C. E1 and F are realistic remedies; E2 is an oracle comparison.
+- **H3:** B uses more metered MB and modeled kWh than C.
+- **H4:** C and D have more vehicles below five participation rounds than A.
 
-    subgraph Guardrails ["Rule-Based Guardrail Verification"]
-        PowerRule{"Power Guardrail<br/>(charging_state != DISCHARGING & SoC >= 50%)<br/>OR (DC_FAST & SoC >= 20%)"}
-        NetRule{"Network Guardrail<br/>(UNMETERED_WIFI & Bandwidth >= 10 Mbps)"}
-    end
+One-sided paired t-tests are combined as intersection-union tests within each composite hypothesis. Holm step-down correction is applied across H1-H4. Paired bootstrap percentile intervals use 10,000 seed resamples. All other policy, rho, subgroup, sensitivity, and P2P comparisons are exploratory and are not included in this correction family.
 
-    Fleet -->|Telemetry Ingestion| Telem
-    Telem --> Orch
-    Orch --> PowerRule
-    PowerRule -->|Pass| NetRule
-    PowerRule -->|Fail| Rejected["Rejected / Preserved (0 MB Cellular, 0% Battery Drain)"]
-    NetRule -->|Pass| EligiblePool["Eligible Vehicle Pool"]
-    NetRule -->|Fail| Rejected
-    EligiblePool --> Manager
-    Manager --> Strategy
-    Strategy -->|Dispatch Model Weights (FitIns)| Fleet
-```
+## Policies
 
----
+- **A, Random:** Sample 5 of 20 vehicles. Aggregate successful updates. If no client survives, retain the prior global model and accuracy.
+- **B, Random over-selection:** Estimate survival probability from current telemetry and select enough random vehicles to target 5 expected survivors. This is a simplified dropout-tolerant baseline, not an implementation or validation of a P2P aggregation protocol.
+- **C, Guardrail:** Select up to 5 vehicles that meet all power, network, and bandwidth guardrails. There is no fallback to ineligible clients.
+- **D, Guardrail + staleness:** Keep C's eligibility rules, then sample without replacement using weight $1 + 2s$, where $s$ is rounds since last selected. This is a participation fairness heuristic, not a guarantee that every vehicle participates.
+- **E1, Inverse-participation weighted:** Use C's selected clients, aggregating with weight $n_i/p_i$, where $n_i$ is local sample count and $p_i$ is cumulative selections for that client. This is the realistic participation-aware aggregation variant.
+- **E2, Oracle group-balanced:** Use E1 weighting, then rescale successful heavy/light group weights to exactly 50/50. It requires known profile membership and is an oracle comparison, not a deployable policy.
+- **F, Heavy-use battery fallback:** Use C's eligibility rules. If fewer than two heavy-use clients are eligible, also allow heavy-use vehicles on parked or charging unmetered Wi-Fi at or above the configured fallback battery threshold (30% by default).
+- **P2P, Connectable peer pairs:** Select one pair of vehicles currently parked with unmetered Wi-Fi. Each trains from the current global model; the pair sample-weight merges updates, and the resulting pair update is used for the next simulated round. This is a minimal pair-connectivity baseline, not a decentralized protocol implementation.
+- **P2P-2:** The same pair merge using two connectable pairs (four clients) per round.
 
-## 📋 Rule Guardrail Specification
+Each successful centralized round uses sample-count-weighted FedAvg. P2P merges each pair before applying the resulting update. Failed selected clients are counted as wasted client-rounds and incur partial modeled compute and download costs. Each seed/policy run uses the same profile assignment, deterministic data partition and test subset, exogenous Markov-state trace, and pre-generated per-vehicle/per-round dropout uniforms; a trace hash check fails the study if paired availability paths diverge. Policy selection and dropout draws use separate random streams.
 
-The `Orchestrator` (`src/orchestrator.py`) enforces two key guardrails before assigning a client to an FL training round:
+## Assumptions
 
-### 1. Power Guardrail
-A vehicle is eligible **ONLY IF**:
-$$\Big(\text{charging\_state} \neq \text{DISCHARGING} \;\land\; \text{battery\_percentage} \ge 50.0\%\Big)$$
-$$\mathbf{OR}$$
-$$\Big(\text{charging\_state} == \text{DC\_FAST\_CHARGING} \;\land\; \text{battery\_percentage} \ge 20.0\%\Big)$$
+These values are simulation assumptions, not measurements of a vehicle fleet. The executable values are in `config.yaml`; the implementation is in `src/telemetry.py`, `src/orchestrator.py`, `src/model.py`, and `study.py`.
 
-* **Rationale:** Disallowing `DISCHARGING` ensures vehicles in active transit do not deplete drive range. Level 2 charging requires at least 50% SoC buffer, whereas high-rate DC Fast Chargers allow safe participation from 20% SoC upwards.
+| Quantity | Assumption |
+|---|---|
+| Fleet and training | 20 vehicles; 10 heavy-use and 10 light-use; 75 rounds; 5 requested clients; 1 local epoch; at most 256 training examples per client; 2,000 MNIST test examples |
+| Heavy-use initial state order | Driving, charging on Wi-Fi, charging on metered cellular, parked on Wi-Fi: `[0.70, 0.10, 0.05, 0.15]` |
+| Light-use initial state order | `[0.15, 0.40, 0.10, 0.35]` |
+| Heavy-use transition rows | Driving `[0.75, 0.10, 0.05, 0.10]`; charging Wi-Fi `[0.35, 0.50, 0.05, 0.10]`; charging metered `[0.50, 0.10, 0.30, 0.10]`; parked Wi-Fi `[0.45, 0.10, 0.05, 0.40]` |
+| Light-use transition rows | Driving `[0.45, 0.30, 0.05, 0.20]`; charging Wi-Fi `[0.08, 0.68, 0.04, 0.20]`; charging metered `[0.20, 0.25, 0.40, 0.15]`; parked Wi-Fi `[0.08, 0.38, 0.04, 0.50]` |
+| Power guardrails | Non-driving charging requires battery $\ge 50\%$; DC fast charging requires $\ge 20\%$. Driving is ineligible. |
+| Network guardrail | Unmetered Wi-Fi only, bandwidth $\ge 10$ Mbps |
+| Mid-round dropout | Driving: 50%; battery below 25%: 60%; metered 4G or bandwidth below 8 Mbps: 45%. Checks are sequential; a client drops at the first failed check. |
+| Energy and transfer | Battery capacity 75 kWh; compute 0.025 kWh per local epoch (40% of this for failed clients); 5 W transmission power; model-size downlink for failures and downlink plus uplink for successes |
+| Over-selection sizing | Target 5 expected survivors; per-client survival probability is the product of the relevant pass probabilities; 0.05 floor for the mean survival estimate |
+| Learning and partitioning | EdgeCNN, SGD learning rate 0.02, Dirichlet $\alpha=0.8$, batch size 128 |
+| Evaluation | Checkpoint every 5 rounds; always evaluate each of the final 10 rounds. Report final accuracy as the average over those 10 rounds. |
+| Primary seeds | 42-61 (20 paired seeds); sensitivity seeds 42-51 (10 seeds) |
+| Inference | Paired t intervals and paired bootstrap percentile intervals (10,000 resamples); Holm correction across H1-H4 only |
+| Policy D staleness bonus | 2.0 per round since last participation |
+| P2P capacity | One pair per round; only parked + unmetered Wi-Fi states are connectable |
 
-### 2. Bandwidth & Network Guardrail
-A vehicle is eligible **ONLY IF**:
-$$\text{network\_type} == \text{UNMETERED\_WIFI} \;\land\; \text{bandwidth\_mbps} \ge 10.0\text{ Mbps}$$
+The Markov states are simplified: parked Wi-Fi is represented as `DISCHARGING` for charging-state telemetry, and charging on metered cellular is represented as DC fast charging. The dropout simulator uses the explicit availability state to avoid treating parked vehicles as driving. These mappings and uniform battery/throughput ranges are synthetic. The energy metric includes only modeled training and transmission energy, not vehicle traction, charger energy, or infrastructure overhead. P2P models a pairwise rendezvous and merge but does not simulate transport latency, topology, multi-hop forwarding, or concurrent consensus.
 
-* **Rationale:** Completely offloads model weight transmission from expensive `METERED_4G` and `CELLULAR_5G` connections to stationary depot/home unmetered Wi-Fi, preventing carrier quota exhaustion and high latency timeouts.
+## Metrics and Sensitivity
 
----
+Headline metrics are worst-class accuracy, classes 5-9 accuracy, and the heavy-minus-light accuracy gap, averaged over the final 10 evaluated rounds. Secondary metrics include mean per-class accuracy. Reports include rounds-to-90 reach fraction and median among successful seeds, Jain participation index, minimum participation, percentage of runs with any vehicle below five rounds, worst-class identity/group frequency, and classes 5-9 share of successful training-example mass.
 
-## 📁 Repository Structure
+Every per-run JSON records the randomized profile map and trace hash, eligible-pool counts by profile per round, selected client IDs, selected and successful training-example mass by class, per-vehicle participation counts, and all 10 class accuracies at each evaluated round. Runs are atomic, independently saved, and skipped on resume only when their fingerprint matches the current design.
 
-```text
-├── src/
-│   ├── client.py        # Flower client implementation with telemetry hooks
-│   ├── server.py        # Custom Flower strategy with custom client manager
-│   ├── telemetry.py     # Synthetic EV telemetry stream simulator
-│   ├── orchestrator.py  # Rule-based guardrails & selection engine
-│   └── model.py         # PyTorch lightweight EdgeCNN model & non-IID partitioning
-├── benchmarks.py        # FL experiment engine and metrics comparator
-├── config.yaml          # Hyperparameters, fleet size, and rule thresholds
-├── run_benchmark.py     # Main script executing Baseline vs. Intelligent runs
-├── plot_results.py      # Publication-grade chart generation (Accuracy & Energy Saved)
-├── requirements.txt     # Python package dependencies
-└── README.md            # Architecture docs and execution guide
-```
+At $\rho=1$, ten-seed sensitivity runs compare A/C/E1/F while changing heavy-use share (0.25, 0.5, 0.75), driving-dropout probability (0.25, 0.5, 0.75), requested clients (3, 5, 8), and F's fallback battery threshold (20%, 30%, 40%). DC-fast battery and Wi-Fi bandwidth threshold sweeps are omitted because those thresholds are inactive under the current telemetry-state mapping.
 
----
+The final workflow creates per-seed participation by profile, eligible-pool size by profile over rounds, classes 5-9 mass share by policy, paired-difference forest plots with t and bootstrap intervals, and policy-mean resource versus worst-class plots with error bars. Every plot title includes $\rho$. The earlier per-vehicle-ID plots mixed profile identities across seeds and have been replaced by within-seed profile summaries.
 
-## 🚀 Quickstart Guide
+### Final Run Status
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/thakuraditya5/fleet-control-plane-and-client-selection-architecture.git
-cd fleet-control-plane-and-client-selection-architecture
-```
+The prior A-D/P2P aggregate is historical, not the final preregistered experiment. On 2026-10-16, the required two-seed, ten-round pilot completed for all nine policies at $\rho=1$. It passed the output-schema, profile/trace pairing, deterministic rerun, plotting, and 1,000-bonus staleness gates. The pilot report is `results/pilot/availability_study_final.json`; its five figures are under `results/pilot/figures/`. Pilot accuracy is not final evidence because it has only two seeds and ten rounds.
 
-### 2. Environment Setup
-Create and activate a virtual environment (Python 3.10+):
+The full run is currently **NO-GO** until the frozen `config.yaml` is committed. Git was found at `C:\Users\1000684\AppData\Local\Programs\Git\cmd\git.exe`, but no config commit has been created yet. Full mode fails closed until Git confirms that the exact config bytes match committed `HEAD`. The pilot output includes the config SHA-256 and reports that it predates this commit. Do not interpret the old aggregate as results for H1-H4.
+
+## Run
+
+Install dependencies with `pip install -r requirements.txt`, then run:
 
 ```bash
-# Linux / macOS
-python3 -m venv venv
-source venv/bin/activate
-
-# Windows (PowerShell)
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+python run_benchmark.py --mode pilot
 ```
 
-Install the dependencies:
-```bash
-pip install -r requirements.txt
-```
+The pilot is the required pre-run gate. Full execution is intentionally refused until `config.yaml` is committed and matches Git HEAD. Commit the frozen config, rerun and pass the pilot against that commit, then run `python run_benchmark.py --mode full`. The full workflow writes resumable, atomic one-file-per-run JSON under `results/runs/`, skips exact completed fingerprints, parallelizes seed bundles, and records config SHA-256 plus Git commit in every output.
 
-### 3. Run Automated FL Benchmarks
-Execute the complete parallel benchmark (Baseline vs. Constraint-Aware):
-```bash
-python run_benchmark.py
-```
-This script will:
-- Partition the MNIST vision task non-IID across 20 dynamic EV clients.
-- Run 15 federated learning rounds under the **Baseline (Random Selection)** strategy.
-- Run 15 federated learning rounds under the **Constraint-Aware (Intelligent)** strategy with identical vehicle traces.
-- Output a comprehensive comparative table to the console.
-- Save detailed round-by-round metrics to `results/benchmark_results.json`.
-- Automatically generate 4 comparison plots in the `results/` directory.
+The planned primary design is A-D plus P2P at all five $\rho$ values and E1/E2/F/P2P-2 at $\rho \in \{0, 0.5, 1\}$, across 20 seeds. Ten-seed sensitivity runs use A/C/E1/F. MNIST downloads on first use. Use `--workers N` to set process parallelism; Windows runs disable system sleep while executing.
 
-### 4. Generate Visualizations Independently
-```bash
-python plot_results.py results/benchmark_results.json results
-```
+## Scope and Follow-up
 
-Generated plots in `results/`:
-- `accuracy_vs_rounds.png`: Test Accuracy & Loss convergence curves.
-- `resource_preservation.png`: Fleet Energy (kWh) and Metered vs. Unmetered Data (MB).
-- `client_dropouts.png`: Mid-round dropouts prevented per round.
-- `comprehensive_dashboard.png`: 4-panel dashboard summarizing the entire benchmark.
+This is a synthetic CPU simulation with 20 vehicles, capped MNIST training data, assumed transition/dropout probabilities, and simplified charging/connectivity mappings. It does not model differential privacy, heterogeneous hardware, real vehicle traces, or deployment costs. E2 is an oracle because it uses profile-group knowledge to force equal group contribution. Interpret results as outcomes under the listed assumptions, not as validation of a general selection or aggregation approach.
 
----
-
-## ⚙️ Configuration (`config.yaml`)
-
-All simulation parameters can be configured in `config.yaml`:
-```yaml
-simulation:
-  fleet_size: 20                   # Dynamic EV nodes
-  num_rounds: 15                   # FL training rounds
-  clients_per_round: 5             # Target clients sampled per round
-  seed: 42                         # Random seed for reproducibility
-  dataset: "MNIST"                 # Edge classification task
-  batch_size: 32
-  local_epochs: 1
-  learning_rate: 0.01
-
-telemetry:
-  battery_capacity_kwh: 75.0       # Standard EV pack size
-  training_energy_per_round_kwh: 0.025 # Compute energy per round
-  transmission_power_w: 5.0        # RF transmission power (Watts)
-
-guardrails:
-  power:
-    disallowed_states: ["DISCHARGING"]
-    min_battery_general: 50.0
-    min_battery_dc_fast: 20.0
-  network:
-    required_network_type: "UNMETERED_WIFI"
-    min_bandwidth_mbps: 10.0
-```
-
----
-
-## 📊 Evaluation Metrics
-
-The framework evaluates:
-1. **Model Convergence Rate:** Global Test Accuracy (%) and Cross-Entropy Loss over rounds.
-2. **Resource Preservation:**
-   - Total battery power saved across the fleet (kWh).
-   - Total data transferred over metered connections (`METERED_4G`, `CELLULAR_5G`) vs. unmetered (`UNMETERED_WIFI`).
-   - Metered data avoidance rate (typically 100% avoided under constraint-aware selection).
-3. **Client Reliability & Dropouts:**
-   - Pre-round rejected client candidates.
-   - Mid-round dropped clients due to dynamic driving handoffs, critical battery cutoffs, or cellular congestion.
-
----
-
-## 🔬 Citation & Reference
-
-Based on research principles from:
-> *An On-Device Federated Learning Approach for Cooperative Model Update Between Edge Devices.*
+A later extension could connect availability-driven participation to client-level cumulative differential privacy accounting. That accounting is not implemented here, and standard random-sampling assumptions should not be assumed to hold for availability-filtered participation.
