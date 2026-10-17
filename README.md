@@ -76,9 +76,31 @@ The final workflow creates per-seed participation by profile, eligible-pool size
 
 ### Final Run Status
 
-The prior A-D/P2P aggregate is historical, not the final preregistered experiment. On 2026-10-16, the required two-seed, ten-round pilot completed for all nine policies at $\rho=1$. It passed the output-schema, profile/trace pairing, deterministic rerun, plotting, and 1,000-bonus staleness gates. The pilot report is `results/pilot/availability_study_final.json`; its five figures are under `results/pilot/figures/`. Pilot accuracy is not final evidence because it has only two seeds and ten rounds.
+The full preregistered run completed on 2026-10-16: 1,220/1,220 per-run records across 20 primary seeds and 10 sensitivity seeds. The output schema, within-seed profile maps, paired availability trace hashes, and config/commit provenance validated. The two-seed pilot and 1,000-bonus staleness gate passed before full execution.
 
-The full run is currently **NO-GO** until the frozen `config.yaml` is committed. Git was found at `C:\Users\1000684\AppData\Local\Programs\Git\cmd\git.exe`, but no config commit has been created yet. Full mode fails closed until Git confirms that the exact config bytes match committed `HEAD`. The pilot output includes the config SHA-256 and reports that it predates this commit. Do not interpret the old aggregate as results for H1-H4.
+Frozen design metadata: config SHA-256 `b8cf0b81b7dde63330a53023ce4f5725132e1301535c098b0e11b7085b3b5a17`; code commit `c88df2b00a7aa8ef6858ca6d34afa9636a7d58b3` (config freeze commit `b8b85fd0fe678ed0b8822e499a3b3856f9ace313`). The final JSON is `results/availability_study_final.json`; resumable per-run files are under `results/runs/`.
+
+#### Primary Results at $\rho=1$
+
+Values below are means over 20 paired seeds; accuracy and participation CIs are 95% Student-t intervals. Paired differences use both t intervals and 10,000-resample bootstrap percentile intervals.
+
+| Policy | Worst class (%) | Classes 5-9 (%) | Classes 5-9 training mass (%) | Energy (kWh) | Metered (MB) | Runs with any vehicle <5 rounds | Jain participation |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| A | 63.08 [59.49, 66.67] | 76.03 [74.14, 77.92] | 39.68 [38.71, 40.65] | 7.86 | 97.69 | 0% | 0.961 |
+| B | 68.04 [64.72, 71.37] | 78.69 [77.00, 80.37] | 39.95 [39.26, 40.64] | 13.41 | 165.50 | 0% | 0.983 |
+| C | 52.98 [49.85, 56.12] | 68.63 [66.49, 70.78] | 24.63 [23.36, 25.91] | 8.80 | 0.00 | 100% | 0.679 |
+| D | 55.39 [52.48, 58.30] | 70.02 [68.08, 71.95] | 25.85 [24.43, 27.26] | 8.80 | 0.00 | 95% | 0.697 |
+| E1, realistic | 63.77 [61.07, 66.47] | 75.79 [74.03, 77.55] | 24.63 [23.36, 25.91] | 8.80 | 0.00 | 100% | 0.679 |
+| E2, oracle | 65.58 [61.39, 69.77] | 76.76 [74.34, 79.18] | 24.63 [23.36, 25.91] | 8.80 | 0.00 | 100% | 0.679 |
+| F, realistic | 62.64 [59.14, 66.15] | 75.21 [73.31, 77.10] | 34.22 [33.15, 35.28] | 9.13 | 0.00 | 75% | 0.807 |
+| P2P | 49.19 [44.23, 54.15] | 66.31 [63.37, 69.24] | 34.07 [32.59, 35.54] | 3.51 | 0.00 | 100% | 0.786 |
+| P2P-2 | 54.90 [49.83, 59.97] | 70.09 [67.09, 73.09] | 35.13 [33.59, 36.67] | 5.89 | 0.00 | 75% | 0.832 |
+
+H1 was supported: paired C-A worst-class difference was -10.10 points (t CI [-14.67, -5.52], bootstrap CI [-14.19, -5.90]); classes 5-9 difference was -7.40 (t CI [-10.20, -4.59], bootstrap CI [-9.90, -4.80]). H2 was supported versus C: E1-C was +10.78 worst-class (t CI [7.27, 14.30], bootstrap [7.71, 14.04]) and +7.16 classes 5-9 (t [5.17, 9.14], bootstrap [5.47, 9.02]); F-C was +9.66 worst-class (t [5.70, 13.61], bootstrap [6.05, 13.24]) and +6.57 classes 5-9 (t [4.03, 9.12], bootstrap [4.26, 8.85]). H3 was supported: B-C used +4.61 kWh (t [4.38, 4.84], bootstrap [4.41, 4.82]) and +165.50 metered MB (t [160.60, 170.40], bootstrap [161.09, 170.00]). H4 was supported: C had +3.55 vehicles/run below five rounds versus A (t [2.83, 4.27], bootstrap [2.90, 4.20]); D had +3.10 (t [2.31, 3.89], bootstrap [2.40, 3.80]). Holm-adjusted p-values were H1 0.000093, H2 0.000062, H3 <0.000001, H4 0.000000162.
+
+E1/F improved both accuracy outcomes relative to C in this simulation, but E1 did not change the selected class-mass share; its gains come from update reweighting, not added class data. F increased heavy-class mass to 34.22% and reduced the run-level starvation rate to 75%, at modestly higher energy than C. E2 remains an oracle and should not be treated as deployable. No C, D, P2P, or P2P-2 seed reached 90%; A reached it in 5% of seeds (median 73 rounds among those), B in 15% (median 69), E1/E2/F in 5% each. These estimates remain conditional on synthetic assumptions and 20 vehicles.
+
+Final figures are in `results/figures/`: `final_participation_by_profile_seed.png`, `eligible_pool_by_profile.png`, `final_class_mass_share.png`, `final_paired_forest_ci.png`, and `final_resource_vs_worst_class.png`. All are generated from primary runs, not sensitivity rows, and label $\rho$.
 
 ## Run
 
@@ -88,9 +110,9 @@ Install dependencies with `pip install -r requirements.txt`, then run:
 python run_benchmark.py --mode pilot
 ```
 
-The pilot is the required pre-run gate. Full execution is intentionally refused until `config.yaml` is committed and matches Git HEAD. Commit the frozen config, rerun and pass the pilot against that commit, then run `python run_benchmark.py --mode full`. The full workflow writes resumable, atomic one-file-per-run JSON under `results/runs/`, skips exact completed fingerprints, parallelizes seed bundles, and records config SHA-256 plus Git commit in every output.
+The pilot is the required pre-run gate. The frozen `config.yaml` is committed, matches Git HEAD, and the pilot passed against the committed runner. The completed full report is `results/availability_study_final.json`; rerun `python run_benchmark.py --mode full` to resume or reproduce it. The workflow writes resumable, atomic one-file-per-run JSON under `results/runs/`, skips exact completed fingerprints, parallelizes seed bundles, and records config SHA-256 plus Git commit in every output.
 
-The planned primary design is A-D plus P2P at all five $\rho$ values and E1/E2/F/P2P-2 at $\rho \in \{0, 0.5, 1\}$, across 20 seeds. Ten-seed sensitivity runs use A/C/E1/F. MNIST downloads on first use. Use `--workers N` to set process parallelism; Windows runs disable system sleep while executing.
+The planned primary design is A-D plus P2P at all five $\rho$ values and E1/E2/F/P2P-2 at $\rho \in \{0, 0.5, 1\}$, across 20 seeds: 740 primary run cells. Ten-seed sensitivity runs use A/C/E1/F: 480 cells. The full plan is 1,220 cells. MNIST downloads on first use. Use `--workers N` to set process parallelism; Windows runs disable system sleep while executing.
 
 ## Scope and Follow-up
 

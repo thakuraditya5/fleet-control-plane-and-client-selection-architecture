@@ -1,0 +1,9579 @@
+{
+  "run_metadata": {
+    "config_sha256": "b8cf0b81b7dde63330a53023ce4f5725132e1301535c098b0e11b7085b3b5a17",
+    "git_commit": "c88df2b00a7aa8ef6858ca6d34afa9636a7d58b3",
+    "experiment_fingerprint": "c0c74a23072f70fda6a512c263ed7c205bf6e63b3596596b862144389302445c"
+  },
+  "result": {
+    "policy": "P2P",
+    "policy_name": "Connectable peer pairs",
+    "rho": 0.5,
+    "seed": 46,
+    "initial_accuracy_pct": 10.700000077486038,
+    "final_accuracy_pct": 84.79499995708466,
+    "last_round_accuracy_pct": 85.69999933242798,
+    "rounds_to_90": null,
+    "expected_survivors_per_round": 1.8133333333333332,
+    "mean_class_accuracy_pct": 84.58822405338287,
+    "worst_class_accuracy_pct": 66.95000022649765,
+    "worst_class_label": 8,
+    "worst_class_is_heavy_group": true,
+    "light_class_accuracy_pct": 92.08806896209717,
+    "heavy_class_accuracy_pct": 77.08837914466858,
+    "class_accuracy_gap_heavy_minus_light_pct": -14.999689817428589,
+    "per_class_accuracy_pct": [
+      97.23300814628601,
+      96.69767498970032,
+      85.80487847328186,
+      89.2233008146286,
+      91.48148238658905,
+      70.73684215545654,
+      87.05555558204651,
+      88.08411180973053,
+      66.95000022649765,
+      72.61538594961166
+    ],
+    "coverage_accuracy_correlation_mean": 0.08614342043240406,
+    "wasted_client_rounds": 3,
+    "total_energy_kwh": 3.35504,
+    "metered_mb": 0.0,
+    "participation_min_rounds": 1,
+    "participation_max_rounds": 16,
+    "vehicles_below_5_rounds": 5,
+    "any_vehicle_below_5_rounds": true,
+    "jain_participation_index": 0.7877342419080068,
+    "participation_weighted_class_mix_pct": [
+      11.043233082706767,
+      12.928806390977444,
+      11.545465225563909,
+      13.26656484962406,
+      11.336936090225564,
+      6.746358082706767,
+      8.652490601503759,
+      8.511513157894736,
+      8.537946428571429,
+      7.430686090225564
+    ],
+    "participation_weighted_heavy_class_share_pct": 39.878994360902254,
+    "selected_class_mass_pct": [
+      10.885799632352942,
+      12.735523897058824,
+      11.612477022058824,
+      13.137637867647058,
+      11.158662683823529,
+      6.930721507352941,
+      8.656939338235293,
+      8.705767463235293,
+      8.622472426470589,
+      7.553998161764706
+    ],
+    "successful_class_mass_pct": [
+      11.043233082706767,
+      12.928806390977444,
+      11.545465225563909,
+      13.26656484962406,
+      11.336936090225564,
+      6.746358082706767,
+      8.652490601503759,
+      8.511513157894736,
+      8.537946428571429,
+      7.430686090225564
+    ],
+    "successful_participation_by_client": {
+      "ev_client_00": 10,
+      "ev_client_01": 13,
+      "ev_client_02": 4,
+      "ev_client_03": 5,
+      "ev_client_04": 9,
+      "ev_client_05": 9,
+      "ev_client_06": 4,
+      "ev_client_07": 16,
+      "ev_client_08": 5,
+      "ev_client_09": 9,
+      "ev_client_10": 6,
+      "ev_client_11": 7,
+      "ev_client_12": 6,
+      "ev_client_13": 0,
+      "ev_client_14": 8,
+      "ev_client_15": 3,
+      "ev_client_16": 2,
+      "ev_client_17": 4,
+      "ev_client_18": 8,
+      "ev_client_19": 5
+    },
+    "selected_client_rounds": 136,
+    "successful_client_rounds": 133,
+    "energy_kwh_per_selected_client_round": 0.02466941176470588,
+    "metered_mb_per_selected_client_round": 0.0,
+    "participation_by_client": {
+      "ev_client_00": 10,
+      "ev_client_01": 13,
+      "ev_client_02": 6,
+      "ev_client_03": 5,
+      "ev_client_04": 9,
+      "ev_client_05": 9,
+      "ev_client_06": 4,
+      "ev_client_07": 16,
+      "ev_client_08": 5,
+      "ev_client_09": 9,
+      "ev_client_10": 6,
+      "ev_client_11": 7,
+      "ev_client_12": 6,
+      "ev_client_13": 1,
+      "ev_client_14": 8,
+      "ev_client_15": 3,
+      "ev_client_16": 2,
+      "ev_client_17": 4,
+      "ev_client_18": 8,
+      "ev_client_19": 5
+    },
+    "profile_map": {
+      "ev_client_00": "light-use",
+      "ev_client_01": "light-use",
+      "ev_client_02": "heavy-use",
+      "ev_client_03": "light-use",
+      "ev_client_04": "light-use",
+      "ev_client_05": "light-use",
+      "ev_client_06": "heavy-use",
+      "ev_client_07": "light-use",
+      "ev_client_08": "heavy-use",
+      "ev_client_09": "light-use",
+      "ev_client_10": "light-use",
+      "ev_client_11": "heavy-use",
+      "ev_client_12": "light-use",
+      "ev_client_13": "heavy-use",
+      "ev_client_14": "heavy-use",
+      "ev_client_15": "heavy-use",
+      "ev_client_16": "heavy-use",
+      "ev_client_17": "heavy-use",
+      "ev_client_18": "light-use",
+      "ev_client_19": "heavy-use"
+    },
+    "availability_trace_sha256": "eebc03fff471a9d6c75f9f9c4b43d3c72df9edf08fb27fa64ba811462d5ac958",
+    "round_history": [
+      {
+        "round": 1,
+        "test_accuracy": 10.700000077486038,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 20.0,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 2,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 0
+        },
+        "selected_clients": [
+          "ev_client_19",
+          "ev_client_06"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ],
+        "successful_class_examples": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ],
+        "selected_class_mix_pct": [
+          2.9296875,
+          3.90625,
+          3.515625,
+          12.5,
+          2.5390625,
+          12.3046875,
+          18.1640625,
+          14.84375,
+          14.6484375,
+          14.6484375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          100.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 0.05,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 2,
+        "test_accuracy": 10.700000077486038,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 20.0,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_09"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ],
+        "successful_class_examples": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ],
+        "selected_class_mix_pct": [
+          17.1875,
+          22.4609375,
+          14.453125,
+          19.140625,
+          11.1328125,
+          1.171875,
+          4.296875,
+          3.7109375,
+          5.46875,
+          0.9765625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          100.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 0.1,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 3,
+        "test_accuracy": 10.700000077486038,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 20.0,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_09",
+          "ev_client_11"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          88,
+          83,
+          68,
+          39,
+          52,
+          23,
+          41,
+          57,
+          32,
+          29
+        ],
+        "successful_class_examples": [
+          88,
+          83,
+          68,
+          39,
+          52,
+          23,
+          41,
+          57,
+          32,
+          29
+        ],
+        "selected_class_mix_pct": [
+          17.1875,
+          16.2109375,
+          13.28125,
+          7.6171875,
+          10.15625,
+          4.4921875,
+          8.0078125,
+          11.1328125,
+          6.25,
+          5.6640625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          100.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 0.15,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 4,
+        "test_accuracy": 10.700000077486038,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 20.0,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_11",
+          "ev_client_15"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          57,
+          14,
+          58,
+          10,
+          42,
+          38,
+          64,
+          114,
+          48,
+          67
+        ],
+        "successful_class_examples": [
+          57,
+          14,
+          58,
+          10,
+          42,
+          38,
+          64,
+          114,
+          48,
+          67
+        ],
+        "selected_class_mix_pct": [
+          11.1328125,
+          2.734375,
+          11.328125,
+          1.953125,
+          8.203125,
+          7.421875,
+          12.5,
+          22.265625,
+          9.375,
+          13.0859375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          100.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 0.2,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 5,
+        "test_accuracy": 21.899999678134918,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 44.390239119529724,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 0
+        },
+        "selected_clients": [
+          "ev_client_06",
+          "ev_client_19"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ],
+        "successful_class_examples": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ],
+        "selected_class_mix_pct": [
+          2.9296875,
+          3.90625,
+          3.515625,
+          12.5,
+          2.5390625,
+          12.3046875,
+          18.1640625,
+          14.84375,
+          14.6484375,
+          14.6484375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          1.6,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          97.22222089767456,
+          96.72897458076477,
+          28.00000011920929,
+          0.0
+        ],
+        "total_energy_kwh": 0.25,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 6,
+        "test_accuracy": 21.899999678134918,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 44.390239119529724,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 2,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 0
+        },
+        "selected_clients": [
+          "ev_client_17",
+          "ev_client_19"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          15,
+          45,
+          21,
+          51,
+          7,
+          63,
+          80,
+          69,
+          83,
+          78
+        ],
+        "successful_class_examples": [
+          15,
+          45,
+          21,
+          51,
+          7,
+          63,
+          80,
+          69,
+          83,
+          78
+        ],
+        "selected_class_mix_pct": [
+          2.9296875,
+          8.7890625,
+          4.1015625,
+          9.9609375,
+          1.3671875,
+          12.3046875,
+          15.625,
+          13.4765625,
+          16.2109375,
+          15.234375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          97.22222089767456,
+          96.72897458076477,
+          28.00000011920929,
+          0.0
+        ],
+        "total_energy_kwh": 0.3,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 7,
+        "test_accuracy": 21.899999678134918,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 44.390239119529724,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_08",
+          "ev_client_19"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          14,
+          22,
+          13,
+          30,
+          7,
+          69,
+          95,
+          77,
+          112,
+          73
+        ],
+        "successful_class_examples": [
+          14,
+          22,
+          13,
+          30,
+          7,
+          69,
+          95,
+          77,
+          112,
+          73
+        ],
+        "selected_class_mix_pct": [
+          2.734375,
+          4.296875,
+          2.5390625,
+          5.859375,
+          1.3671875,
+          13.4765625,
+          18.5546875,
+          15.0390625,
+          21.875,
+          14.2578125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          97.22222089767456,
+          96.72897458076477,
+          28.00000011920929,
+          0.0
+        ],
+        "total_energy_kwh": 0.35,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 8,
+        "test_accuracy": 21.899999678134918,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 44.390239119529724,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_02",
+          "ev_client_09"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          56,
+          86,
+          84,
+          61,
+          27,
+          32,
+          42,
+          54,
+          34,
+          36
+        ],
+        "successful_class_examples": [
+          56,
+          86,
+          84,
+          61,
+          27,
+          32,
+          42,
+          54,
+          34,
+          36
+        ],
+        "selected_class_mix_pct": [
+          10.9375,
+          16.796875,
+          16.40625,
+          11.9140625,
+          5.2734375,
+          6.25,
+          8.203125,
+          10.546875,
+          6.640625,
+          7.03125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          97.22222089767456,
+          96.72897458076477,
+          28.00000011920929,
+          0.0
+        ],
+        "total_energy_kwh": 0.4,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 9,
+        "test_accuracy": 21.899999678134918,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 44.390239119529724,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_02",
+          "ev_client_00"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ],
+        "successful_class_examples": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ],
+        "selected_class_mix_pct": [
+          6.640625,
+          7.6171875,
+          19.53125,
+          13.0859375,
+          10.9375,
+          8.3984375,
+          6.0546875,
+          9.9609375,
+          6.640625,
+          11.1328125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          97.22222089767456,
+          96.72897458076477,
+          28.00000011920929,
+          0.0
+        ],
+        "total_energy_kwh": 0.45,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 10,
+        "test_accuracy": 49.64999854564667,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.347032390534874,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_04",
+          "ev_client_09"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          90,
+          139,
+          49,
+          69,
+          56,
+          9,
+          40,
+          22,
+          28,
+          10
+        ],
+        "successful_class_examples": [
+          90,
+          139,
+          49,
+          69,
+          56,
+          9,
+          40,
+          22,
+          28,
+          10
+        ],
+        "selected_class_mix_pct": [
+          17.578125,
+          27.1484375,
+          9.5703125,
+          13.4765625,
+          10.9375,
+          1.7578125,
+          7.8125,
+          4.296875,
+          5.46875,
+          1.953125
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          1.6,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          81.5533995628357,
+          100.0,
+          79.5121967792511,
+          86.40776872634888,
+          0.0,
+          0.0,
+          65.55555462837219,
+          63.55140209197998,
+          2.500000037252903,
+          5.128205195069313
+        ],
+        "total_energy_kwh": 0.50001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 11,
+        "test_accuracy": 49.64999854564667,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.347032390534874,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_04"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "successful_class_examples": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "selected_class_mix_pct": [
+          14.2578125,
+          18.359375,
+          10.15625,
+          17.1875,
+          15.234375,
+          3.7109375,
+          4.6875,
+          4.4921875,
+          8.7890625,
+          3.125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          81.5533995628357,
+          100.0,
+          79.5121967792511,
+          86.40776872634888,
+          0.0,
+          0.0,
+          65.55555462837219,
+          63.55140209197998,
+          2.500000037252903,
+          5.128205195069313
+        ],
+        "total_energy_kwh": 0.55001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 12,
+        "test_accuracy": 49.64999854564667,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.347032390534874,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_12",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          59,
+          78,
+          63,
+          89,
+          65,
+          54,
+          14,
+          15,
+          51,
+          24
+        ],
+        "successful_class_examples": [
+          59,
+          78,
+          63,
+          89,
+          65,
+          54,
+          14,
+          15,
+          51,
+          24
+        ],
+        "selected_class_mix_pct": [
+          11.5234375,
+          15.234375,
+          12.3046875,
+          17.3828125,
+          12.6953125,
+          10.546875,
+          2.734375,
+          2.9296875,
+          9.9609375,
+          4.6875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          81.5533995628357,
+          100.0,
+          79.5121967792511,
+          86.40776872634888,
+          0.0,
+          0.0,
+          65.55555462837219,
+          63.55140209197998,
+          2.500000037252903,
+          5.128205195069313
+        ],
+        "total_energy_kwh": 0.60001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 13,
+        "test_accuracy": 49.64999854564667,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.347032390534874,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 7,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_02",
+          "ev_client_00"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ],
+        "successful_class_examples": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ],
+        "selected_class_mix_pct": [
+          6.640625,
+          7.6171875,
+          19.53125,
+          13.0859375,
+          10.9375,
+          8.3984375,
+          6.0546875,
+          9.9609375,
+          6.640625,
+          11.1328125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          81.5533995628357,
+          100.0,
+          79.5121967792511,
+          86.40776872634888,
+          0.0,
+          0.0,
+          65.55555462837219,
+          63.55140209197998,
+          2.500000037252903,
+          5.128205195069313
+        ],
+        "total_energy_kwh": 0.65001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 14,
+        "test_accuracy": 49.64999854564667,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.347032390534874,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_19",
+          "ev_client_03"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          54,
+          58,
+          43,
+          50,
+          58,
+          42,
+          68,
+          55,
+          44,
+          40
+        ],
+        "successful_class_examples": [
+          54,
+          58,
+          43,
+          50,
+          58,
+          42,
+          68,
+          55,
+          44,
+          40
+        ],
+        "selected_class_mix_pct": [
+          10.546875,
+          11.328125,
+          8.3984375,
+          9.765625,
+          11.328125,
+          8.203125,
+          13.28125,
+          10.7421875,
+          8.59375,
+          7.8125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          81.5533995628357,
+          100.0,
+          79.5121967792511,
+          86.40776872634888,
+          0.0,
+          0.0,
+          65.55555462837219,
+          63.55140209197998,
+          2.500000037252903,
+          5.128205195069313
+        ],
+        "total_energy_kwh": 0.70001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 15,
+        "test_accuracy": 61.34999990463257,
+        "worst_class_accuracy": 2.051282115280628,
+        "heavy_class_accuracy": 42.87208620458841,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_11",
+          "ev_client_12"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          59,
+          46,
+          57,
+          30,
+          60,
+          71,
+          33,
+          53,
+          55,
+          48
+        ],
+        "successful_class_examples": [
+          59,
+          46,
+          57,
+          30,
+          60,
+          71,
+          33,
+          53,
+          55,
+          48
+        ],
+        "selected_class_mix_pct": [
+          11.5234375,
+          8.984375,
+          11.1328125,
+          5.859375,
+          11.71875,
+          13.8671875,
+          6.4453125,
+          10.3515625,
+          10.7421875,
+          9.375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          89.3203854560852,
+          93.4883713722229,
+          95.12194991111755,
+          28.155338764190674,
+          85.71428656578064,
+          82.63157606124878,
+          25.0,
+          83.17757248878479,
+          21.50000035762787,
+          2.051282115280628
+        ],
+        "total_energy_kwh": 0.75001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 16,
+        "test_accuracy": 61.34999990463257,
+        "worst_class_accuracy": 2.051282115280628,
+        "heavy_class_accuracy": 42.87208620458841,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 1,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 0
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          89.3203854560852,
+          93.4883713722229,
+          95.12194991111755,
+          28.155338764190674,
+          85.71428656578064,
+          82.63157606124878,
+          25.0,
+          83.17757248878479,
+          21.50000035762787,
+          2.051282115280628
+        ],
+        "total_energy_kwh": 0.75001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 17,
+        "test_accuracy": 61.34999990463257,
+        "worst_class_accuracy": 2.051282115280628,
+        "heavy_class_accuracy": 42.87208620458841,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 1,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 0
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          89.3203854560852,
+          93.4883713722229,
+          95.12194991111755,
+          28.155338764190674,
+          85.71428656578064,
+          82.63157606124878,
+          25.0,
+          83.17757248878479,
+          21.50000035762787,
+          2.051282115280628
+        ],
+        "total_energy_kwh": 0.75001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 18,
+        "test_accuracy": 61.34999990463257,
+        "worst_class_accuracy": 2.051282115280628,
+        "heavy_class_accuracy": 42.87208620458841,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_05",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          55,
+          75,
+          92,
+          82,
+          86,
+          16,
+          25,
+          40,
+          26,
+          15
+        ],
+        "successful_class_examples": [
+          55,
+          75,
+          92,
+          82,
+          86,
+          16,
+          25,
+          40,
+          26,
+          15
+        ],
+        "selected_class_mix_pct": [
+          10.7421875,
+          14.6484375,
+          17.96875,
+          16.015625,
+          16.796875,
+          3.125,
+          4.8828125,
+          7.8125,
+          5.078125,
+          2.9296875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          89.3203854560852,
+          93.4883713722229,
+          95.12194991111755,
+          28.155338764190674,
+          85.71428656578064,
+          82.63157606124878,
+          25.0,
+          83.17757248878479,
+          21.50000035762787,
+          2.051282115280628
+        ],
+        "total_energy_kwh": 0.80001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 19,
+        "test_accuracy": 61.34999990463257,
+        "worst_class_accuracy": 2.051282115280628,
+        "heavy_class_accuracy": 42.87208620458841,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_05",
+          "ev_client_18"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          72,
+          62,
+          81,
+          64,
+          81,
+          19,
+          72,
+          40,
+          7,
+          14
+        ],
+        "successful_class_examples": [
+          72,
+          62,
+          81,
+          64,
+          81,
+          19,
+          72,
+          40,
+          7,
+          14
+        ],
+        "selected_class_mix_pct": [
+          14.0625,
+          12.109375,
+          15.8203125,
+          12.5,
+          15.8203125,
+          3.7109375,
+          14.0625,
+          7.8125,
+          1.3671875,
+          2.734375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          89.3203854560852,
+          93.4883713722229,
+          95.12194991111755,
+          28.155338764190674,
+          85.71428656578064,
+          82.63157606124878,
+          25.0,
+          83.17757248878479,
+          21.50000035762787,
+          2.051282115280628
+        ],
+        "total_energy_kwh": 0.85001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 20,
+        "test_accuracy": 41.200000047683716,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 1.7777778208255768,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_18",
+          "ev_client_01"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ],
+        "successful_class_examples": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ],
+        "selected_class_mix_pct": [
+          17.1875,
+          11.1328125,
+          12.890625,
+          19.3359375,
+          14.453125,
+          3.7109375,
+          10.3515625,
+          3.90625,
+          5.078125,
+          1.953125
+        ],
+        "class_coverage_window": [
+          1.2,
+          1.2,
+          1.2,
+          1.2,
+          1.2,
+          1.2,
+          1.2,
+          1.2,
+          0.8,
+          1.2
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          72.81553149223328,
+          90.69767594337463,
+          38.53658437728882,
+          99.51456189155579,
+          94.70899701118469,
+          0.0,
+          8.888889104127884,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 0.90001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 21,
+        "test_accuracy": 41.200000047683716,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 1.7777778208255768,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_11",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ],
+        "successful_class_examples": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ],
+        "selected_class_mix_pct": [
+          10.7421875,
+          8.3984375,
+          16.796875,
+          4.4921875,
+          15.8203125,
+          6.4453125,
+          8.59375,
+          15.234375,
+          5.859375,
+          7.6171875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          72.81553149223328,
+          90.69767594337463,
+          38.53658437728882,
+          99.51456189155579,
+          94.70899701118469,
+          0.0,
+          8.888889104127884,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 0.95001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 22,
+        "test_accuracy": 41.200000047683716,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 1.7777778208255768,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_11"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          68,
+          46,
+          78,
+          69,
+          75,
+          29,
+          23,
+          54,
+          42,
+          28
+        ],
+        "successful_class_examples": [
+          68,
+          46,
+          78,
+          69,
+          75,
+          29,
+          23,
+          54,
+          42,
+          28
+        ],
+        "selected_class_mix_pct": [
+          13.28125,
+          8.984375,
+          15.234375,
+          13.4765625,
+          14.6484375,
+          5.6640625,
+          4.4921875,
+          10.546875,
+          8.203125,
+          5.46875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          72.81553149223328,
+          90.69767594337463,
+          38.53658437728882,
+          99.51456189155579,
+          94.70899701118469,
+          0.0,
+          8.888889104127884,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.00001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 23,
+        "test_accuracy": 41.200000047683716,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 1.7777778208255768,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 7,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_18",
+          "ev_client_10"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          76,
+          73,
+          60,
+          100,
+          55,
+          24,
+          64,
+          44,
+          4,
+          12
+        ],
+        "successful_class_examples": [
+          76,
+          73,
+          60,
+          100,
+          55,
+          24,
+          64,
+          44,
+          4,
+          12
+        ],
+        "selected_class_mix_pct": [
+          14.84375,
+          14.2578125,
+          11.71875,
+          19.53125,
+          10.7421875,
+          4.6875,
+          12.5,
+          8.59375,
+          0.78125,
+          2.34375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          72.81553149223328,
+          90.69767594337463,
+          38.53658437728882,
+          99.51456189155579,
+          94.70899701118469,
+          0.0,
+          8.888889104127884,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.05001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 24,
+        "test_accuracy": 41.200000047683716,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 1.7777778208255768,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_18"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ],
+        "successful_class_examples": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ],
+        "selected_class_mix_pct": [
+          17.1875,
+          11.1328125,
+          12.890625,
+          19.3359375,
+          14.453125,
+          3.7109375,
+          10.3515625,
+          3.90625,
+          5.078125,
+          1.953125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          72.81553149223328,
+          90.69767594337463,
+          38.53658437728882,
+          99.51456189155579,
+          94.70899701118469,
+          0.0,
+          8.888889104127884,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.10001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 25,
+        "test_accuracy": 63.65000009536743,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 34.265562146902084,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_09",
+          "ev_client_10"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ],
+        "successful_class_examples": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ],
+        "selected_class_mix_pct": [
+          15.4296875,
+          24.0234375,
+          11.9140625,
+          17.1875,
+          7.2265625,
+          2.9296875,
+          6.8359375,
+          9.1796875,
+          2.5390625,
+          2.734375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          1.8,
+          2.0,
+          2.0,
+          1.6,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          98.54369163513184,
+          99.06976819038391,
+          90.73171019554138,
+          83.49514603614807,
+          84.1269850730896,
+          11.052631586790085,
+          70.55555582046509,
+          89.71962332725525,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.15001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 26,
+        "test_accuracy": 63.65000009536743,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 34.265562146902084,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 2,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_04",
+          "ev_client_03"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ],
+        "successful_class_examples": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ],
+        "selected_class_mix_pct": [
+          15.4296875,
+          21.2890625,
+          9.5703125,
+          12.109375,
+          18.1640625,
+          2.34375,
+          8.203125,
+          4.6875,
+          4.4921875,
+          3.7109375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          99.06976819038391,
+          90.73171019554138,
+          83.49514603614807,
+          84.1269850730896,
+          11.052631586790085,
+          70.55555582046509,
+          89.71962332725525,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.20001,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 27,
+        "test_accuracy": 63.65000009536743,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 34.265562146902084,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_12",
+          "ev_client_04"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ],
+        "successful_class_examples": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ],
+        "selected_class_mix_pct": [
+          11.9140625,
+          19.921875,
+          7.421875,
+          11.71875,
+          12.5,
+          11.1328125,
+          6.25,
+          3.515625,
+          9.9609375,
+          5.6640625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          99.06976819038391,
+          90.73171019554138,
+          83.49514603614807,
+          84.1269850730896,
+          11.052631586790085,
+          70.55555582046509,
+          89.71962332725525,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.25002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 28,
+        "test_accuracy": 63.65000009536743,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 34.265562146902084,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 7,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 6
+        },
+        "selected_clients": [
+          "ev_client_03",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          64,
+          82,
+          82,
+          45,
+          100,
+          13,
+          45,
+          45,
+          11,
+          25
+        ],
+        "successful_class_examples": [
+          64,
+          82,
+          82,
+          45,
+          100,
+          13,
+          45,
+          45,
+          11,
+          25
+        ],
+        "selected_class_mix_pct": [
+          12.5,
+          16.015625,
+          16.015625,
+          8.7890625,
+          19.53125,
+          2.5390625,
+          8.7890625,
+          8.7890625,
+          2.1484375,
+          4.8828125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          99.06976819038391,
+          90.73171019554138,
+          83.49514603614807,
+          84.1269850730896,
+          11.052631586790085,
+          70.55555582046509,
+          89.71962332725525,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.30002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 29,
+        "test_accuracy": 63.65000009536743,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 34.265562146902084,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_04",
+          "ev_client_12"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ],
+        "successful_class_examples": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ],
+        "selected_class_mix_pct": [
+          11.9140625,
+          19.921875,
+          7.421875,
+          11.71875,
+          12.5,
+          11.1328125,
+          6.25,
+          3.515625,
+          9.9609375,
+          5.6640625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          99.06976819038391,
+          90.73171019554138,
+          83.49514603614807,
+          84.1269850730896,
+          11.052631586790085,
+          70.55555582046509,
+          89.71962332725525,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.35002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 30,
+        "test_accuracy": 59.3999981880188,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.210690975189213,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 6
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_00"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ],
+        "successful_class_examples": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ],
+        "selected_class_mix_pct": [
+          12.890625,
+          13.28125,
+          17.578125,
+          20.3125,
+          16.796875,
+          3.3203125,
+          2.1484375,
+          3.125,
+          5.46875,
+          5.078125
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          95.63106894493103,
+          97.20930457115173,
+          91.70731902122498,
+          65.5339777469635,
+          98.41269850730896,
+          28.421053290367126,
+          33.33333432674408,
+          74.29906725883484,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.40002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 31,
+        "test_accuracy": 59.3999981880188,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.210690975189213,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_00",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ],
+        "successful_class_examples": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ],
+        "selected_class_mix_pct": [
+          12.890625,
+          13.28125,
+          17.578125,
+          20.3125,
+          16.796875,
+          3.3203125,
+          2.1484375,
+          3.125,
+          5.46875,
+          5.078125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          95.63106894493103,
+          97.20930457115173,
+          91.70731902122498,
+          65.5339777469635,
+          98.41269850730896,
+          28.421053290367126,
+          33.33333432674408,
+          74.29906725883484,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.45002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 32,
+        "test_accuracy": 59.3999981880188,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.210690975189213,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_06",
+          "ev_client_10"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          29,
+          55,
+          36,
+          95,
+          29,
+          39,
+          62,
+          70,
+          39,
+          58
+        ],
+        "successful_class_examples": [
+          29,
+          55,
+          36,
+          95,
+          29,
+          39,
+          62,
+          70,
+          39,
+          58
+        ],
+        "selected_class_mix_pct": [
+          5.6640625,
+          10.7421875,
+          7.03125,
+          18.5546875,
+          5.6640625,
+          7.6171875,
+          12.109375,
+          13.671875,
+          7.6171875,
+          11.328125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          95.63106894493103,
+          97.20930457115173,
+          91.70731902122498,
+          65.5339777469635,
+          98.41269850730896,
+          28.421053290367126,
+          33.33333432674408,
+          74.29906725883484,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.50002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 33,
+        "test_accuracy": 59.3999981880188,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.210690975189213,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_10",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          59,
+          86,
+          71,
+          118,
+          60,
+          21,
+          17,
+          44,
+          23,
+          13
+        ],
+        "successful_class_examples": [
+          59,
+          86,
+          71,
+          118,
+          60,
+          21,
+          17,
+          44,
+          23,
+          13
+        ],
+        "selected_class_mix_pct": [
+          11.5234375,
+          16.796875,
+          13.8671875,
+          23.046875,
+          11.71875,
+          4.1015625,
+          3.3203125,
+          8.59375,
+          4.4921875,
+          2.5390625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          95.63106894493103,
+          97.20930457115173,
+          91.70731902122498,
+          65.5339777469635,
+          98.41269850730896,
+          28.421053290367126,
+          33.33333432674408,
+          74.29906725883484,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.55002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 34,
+        "test_accuracy": 59.3999981880188,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 27.210690975189213,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_08",
+          "ev_client_00"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          35,
+          39,
+          50,
+          47,
+          49,
+          41,
+          58,
+          43,
+          81,
+          69
+        ],
+        "successful_class_examples": [
+          35,
+          39,
+          50,
+          47,
+          49,
+          41,
+          58,
+          43,
+          81,
+          69
+        ],
+        "selected_class_mix_pct": [
+          6.8359375,
+          7.6171875,
+          9.765625,
+          9.1796875,
+          9.5703125,
+          8.0078125,
+          11.328125,
+          8.3984375,
+          15.8203125,
+          13.4765625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          95.63106894493103,
+          97.20930457115173,
+          91.70731902122498,
+          65.5339777469635,
+          98.41269850730896,
+          28.421053290367126,
+          33.33333432674408,
+          74.29906725883484,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 1.60002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 35,
+        "test_accuracy": 68.04999709129333,
+        "worst_class_accuracy": 3.500000014901161,
+        "heavy_class_accuracy": 46.99359990656376,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 7,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_15",
+          "ev_client_00"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          55,
+          36,
+          70,
+          45,
+          53,
+          26,
+          52,
+          76,
+          34,
+          65
+        ],
+        "successful_class_examples": [
+          55,
+          36,
+          70,
+          45,
+          53,
+          26,
+          52,
+          76,
+          34,
+          65
+        ],
+        "selected_class_mix_pct": [
+          10.7421875,
+          7.03125,
+          13.671875,
+          8.7890625,
+          10.3515625,
+          5.078125,
+          10.15625,
+          14.84375,
+          6.640625,
+          12.6953125
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          98.54369163513184,
+          95.34883499145508,
+          95.60975432395935,
+          68.93203854560852,
+          79.89417910575867,
+          51.05262994766235,
+          65.55555462837219,
+          94.85981464385986,
+          3.500000014901161,
+          20.000000298023224
+        ],
+        "total_energy_kwh": 1.65002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 36,
+        "test_accuracy": 68.04999709129333,
+        "worst_class_accuracy": 3.500000014901161,
+        "heavy_class_accuracy": 46.99359990656376,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 7,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 6
+        },
+        "selected_clients": [
+          "ev_client_18",
+          "ev_client_03"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          94,
+          72,
+          63,
+          73,
+          89,
+          12,
+          71,
+          21,
+          4,
+          13
+        ],
+        "successful_class_examples": [
+          94,
+          72,
+          63,
+          73,
+          89,
+          12,
+          71,
+          21,
+          4,
+          13
+        ],
+        "selected_class_mix_pct": [
+          18.359375,
+          14.0625,
+          12.3046875,
+          14.2578125,
+          17.3828125,
+          2.34375,
+          13.8671875,
+          4.1015625,
+          0.78125,
+          2.5390625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          95.34883499145508,
+          95.60975432395935,
+          68.93203854560852,
+          79.89417910575867,
+          51.05262994766235,
+          65.55555462837219,
+          94.85981464385986,
+          3.500000014901161,
+          20.000000298023224
+        ],
+        "total_energy_kwh": 1.70002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 37,
+        "test_accuracy": 68.04999709129333,
+        "worst_class_accuracy": 3.500000014901161,
+        "heavy_class_accuracy": 46.99359990656376,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 1,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 0
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          95.34883499145508,
+          95.60975432395935,
+          68.93203854560852,
+          79.89417910575867,
+          51.05262994766235,
+          65.55555462837219,
+          94.85981464385986,
+          3.500000014901161,
+          20.000000298023224
+        ],
+        "total_energy_kwh": 1.70002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 38,
+        "test_accuracy": 68.04999709129333,
+        "worst_class_accuracy": 3.500000014901161,
+        "heavy_class_accuracy": 46.99359990656376,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 1
+        },
+        "selected_clients": [
+          "ev_client_12",
+          "ev_client_17"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          29,
+          72,
+          31,
+          53,
+          28,
+          72,
+          46,
+          34,
+          75,
+          72
+        ],
+        "successful_class_examples": [
+          29,
+          72,
+          31,
+          53,
+          28,
+          72,
+          46,
+          34,
+          75,
+          72
+        ],
+        "selected_class_mix_pct": [
+          5.6640625,
+          14.0625,
+          6.0546875,
+          10.3515625,
+          5.46875,
+          14.0625,
+          8.984375,
+          6.640625,
+          14.6484375,
+          14.0625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          95.34883499145508,
+          95.60975432395935,
+          68.93203854560852,
+          79.89417910575867,
+          51.05262994766235,
+          65.55555462837219,
+          94.85981464385986,
+          3.500000014901161,
+          20.000000298023224
+        ],
+        "total_energy_kwh": 1.75002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 39,
+        "test_accuracy": 68.04999709129333,
+        "worst_class_accuracy": 3.500000014901161,
+        "heavy_class_accuracy": 46.99359990656376,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 8,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_14",
+          "ev_client_01"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ],
+        "successful_class_examples": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ],
+        "selected_class_mix_pct": [
+          8.7890625,
+          9.765625,
+          7.8125,
+          11.328125,
+          8.0078125,
+          11.328125,
+          8.7890625,
+          7.8125,
+          14.0625,
+          12.3046875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          95.34883499145508,
+          95.60975432395935,
+          68.93203854560852,
+          79.89417910575867,
+          51.05262994766235,
+          65.55555462837219,
+          94.85981464385986,
+          3.500000014901161,
+          20.000000298023224
+        ],
+        "total_energy_kwh": 1.80002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 40,
+        "test_accuracy": 64.14999961853027,
+        "worst_class_accuracy": 10.052909702062607,
+        "heavy_class_accuracy": 77.66304135322571,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 8,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_14",
+          "ev_client_06"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          12,
+          27,
+          12,
+          46,
+          11,
+          72,
+          88,
+          62,
+          81,
+          101
+        ],
+        "successful_class_examples": [
+          12,
+          27,
+          12,
+          46,
+          11,
+          72,
+          88,
+          62,
+          81,
+          101
+        ],
+        "selected_class_mix_pct": [
+          2.34375,
+          5.2734375,
+          2.34375,
+          8.984375,
+          2.1484375,
+          14.0625,
+          17.1875,
+          12.109375,
+          15.8203125,
+          19.7265625
+        ],
+        "class_coverage_window": [
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.4,
+          1.6
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          50.0,
+          83.25581550598145,
+          50.731706619262695,
+          57.76699185371399,
+          10.052909702062607,
+          50.0,
+          87.22222447395325,
+          65.887850522995,
+          97.00000286102295,
+          88.20512890815735
+        ],
+        "total_energy_kwh": 1.85002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 41,
+        "test_accuracy": 64.14999961853027,
+        "worst_class_accuracy": 10.052909702062607,
+        "heavy_class_accuracy": 77.66304135322571,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_14"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          42,
+          58,
+          47,
+          69,
+          42,
+          54,
+          43,
+          36,
+          65,
+          56
+        ],
+        "successful_class_examples": [
+          42,
+          58,
+          47,
+          69,
+          42,
+          54,
+          43,
+          36,
+          65,
+          56
+        ],
+        "selected_class_mix_pct": [
+          8.203125,
+          11.328125,
+          9.1796875,
+          13.4765625,
+          8.203125,
+          10.546875,
+          8.3984375,
+          7.03125,
+          12.6953125,
+          10.9375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          50.0,
+          83.25581550598145,
+          50.731706619262695,
+          57.76699185371399,
+          10.052909702062607,
+          50.0,
+          87.22222447395325,
+          65.887850522995,
+          97.00000286102295,
+          88.20512890815735
+        ],
+        "total_energy_kwh": 1.90002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 42,
+        "test_accuracy": 64.14999961853027,
+        "worst_class_accuracy": 10.052909702062607,
+        "heavy_class_accuracy": 77.66304135322571,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_10",
+          "ev_client_17"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          29,
+          80,
+          39,
+          82,
+          23,
+          39,
+          49,
+          63,
+          47,
+          61
+        ],
+        "successful_class_examples": [
+          29,
+          80,
+          39,
+          82,
+          23,
+          39,
+          49,
+          63,
+          47,
+          61
+        ],
+        "selected_class_mix_pct": [
+          5.6640625,
+          15.625,
+          7.6171875,
+          16.015625,
+          4.4921875,
+          7.6171875,
+          9.5703125,
+          12.3046875,
+          9.1796875,
+          11.9140625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          50.0,
+          83.25581550598145,
+          50.731706619262695,
+          57.76699185371399,
+          10.052909702062607,
+          50.0,
+          87.22222447395325,
+          65.887850522995,
+          97.00000286102295,
+          88.20512890815735
+        ],
+        "total_energy_kwh": 1.95002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 43,
+        "test_accuracy": 64.14999961853027,
+        "worst_class_accuracy": 10.052909702062607,
+        "heavy_class_accuracy": 77.66304135322571,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_08",
+          "ev_client_14"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ],
+        "successful_class_examples": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ],
+        "selected_class_mix_pct": [
+          2.1484375,
+          5.6640625,
+          1.3671875,
+          2.34375,
+          0.9765625,
+          15.234375,
+          17.578125,
+          12.3046875,
+          23.046875,
+          19.3359375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          50.0,
+          83.25581550598145,
+          50.731706619262695,
+          57.76699185371399,
+          10.052909702062607,
+          50.0,
+          87.22222447395325,
+          65.887850522995,
+          97.00000286102295,
+          88.20512890815735
+        ],
+        "total_energy_kwh": 2.00002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 44,
+        "test_accuracy": 64.14999961853027,
+        "worst_class_accuracy": 10.052909702062607,
+        "heavy_class_accuracy": 77.66304135322571,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_14",
+          "ev_client_08"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ],
+        "successful_class_examples": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ],
+        "selected_class_mix_pct": [
+          2.1484375,
+          5.6640625,
+          1.3671875,
+          2.34375,
+          0.9765625,
+          15.234375,
+          17.578125,
+          12.3046875,
+          23.046875,
+          19.3359375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          50.0,
+          83.25581550598145,
+          50.731706619262695,
+          57.76699185371399,
+          10.052909702062607,
+          50.0,
+          87.22222447395325,
+          65.887850522995,
+          97.00000286102295,
+          88.20512890815735
+        ],
+        "total_energy_kwh": 2.05002,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 45,
+        "test_accuracy": 70.55000066757202,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 45.65726637840271,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 8,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_04",
+          "ev_client_03"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ],
+        "successful_class_examples": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ],
+        "selected_class_mix_pct": [
+          15.4296875,
+          21.2890625,
+          9.5703125,
+          12.109375,
+          18.1640625,
+          2.34375,
+          8.203125,
+          4.6875,
+          4.4921875,
+          3.7109375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.74418568611145,
+          88.78048658370972,
+          90.77669978141785,
+          97.35449552536011,
+          54.21052575111389,
+          83.88888835906982,
+          90.18691778182983,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 2.10003,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 46,
+        "test_accuracy": 70.55000066757202,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 45.65726637840271,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_04"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          70,
+          102,
+          59,
+          99,
+          79,
+          15,
+          22,
+          19,
+          38,
+          9
+        ],
+        "successful_class_examples": [
+          70,
+          102,
+          59,
+          99,
+          79,
+          15,
+          22,
+          19,
+          38,
+          9
+        ],
+        "selected_class_mix_pct": [
+          13.671875,
+          19.921875,
+          11.5234375,
+          19.3359375,
+          15.4296875,
+          2.9296875,
+          4.296875,
+          3.7109375,
+          7.421875,
+          1.7578125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.74418568611145,
+          88.78048658370972,
+          90.77669978141785,
+          97.35449552536011,
+          54.21052575111389,
+          83.88888835906982,
+          90.18691778182983,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 2.15003,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 47,
+        "test_accuracy": 70.55000066757202,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 45.65726637840271,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_08"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          37,
+          49,
+          44,
+          71,
+          43,
+          36,
+          51,
+          43,
+          91,
+          47
+        ],
+        "successful_class_examples": [
+          37,
+          49,
+          44,
+          71,
+          43,
+          36,
+          51,
+          43,
+          91,
+          47
+        ],
+        "selected_class_mix_pct": [
+          7.2265625,
+          9.5703125,
+          8.59375,
+          13.8671875,
+          8.3984375,
+          7.03125,
+          9.9609375,
+          8.3984375,
+          17.7734375,
+          9.1796875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.74418568611145,
+          88.78048658370972,
+          90.77669978141785,
+          97.35449552536011,
+          54.21052575111389,
+          83.88888835906982,
+          90.18691778182983,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 2.20003,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 48,
+        "test_accuracy": 70.55000066757202,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 45.65726637840271,
+        "selected_count": 2,
+        "successful_count": 1,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 1,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_13",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          60,
+          51,
+          50,
+          67,
+          45,
+          58,
+          26,
+          55,
+          64,
+          36
+        ],
+        "successful_class_examples": [
+          34,
+          39,
+          42,
+          64,
+          40,
+          6,
+          2,
+          8,
+          19,
+          2
+        ],
+        "selected_class_mix_pct": [
+          11.71875,
+          9.9609375,
+          9.765625,
+          13.0859375,
+          8.7890625,
+          11.328125,
+          5.078125,
+          10.7421875,
+          12.5,
+          7.03125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.74418568611145,
+          88.78048658370972,
+          90.77669978141785,
+          97.35449552536011,
+          54.21052575111389,
+          83.88888835906982,
+          90.18691778182983,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 2.23503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 49,
+        "test_accuracy": 70.55000066757202,
+        "worst_class_accuracy": 0.0,
+        "heavy_class_accuracy": 45.65726637840271,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_18",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ],
+        "successful_class_examples": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ],
+        "selected_class_mix_pct": [
+          16.6015625,
+          12.6953125,
+          14.2578125,
+          21.484375,
+          14.6484375,
+          2.9296875,
+          9.9609375,
+          3.125,
+          3.7109375,
+          0.5859375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.74418568611145,
+          88.78048658370972,
+          90.77669978141785,
+          97.35449552536011,
+          54.21052575111389,
+          83.88888835906982,
+          90.18691778182983,
+          0.0,
+          0.0
+        ],
+        "total_energy_kwh": 2.28503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 50,
+        "test_accuracy": 71.95000052452087,
+        "worst_class_accuracy": 2.427184395492077,
+        "heavy_class_accuracy": 85.55397868156433,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 2,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 0
+        },
+        "selected_clients": [
+          "ev_client_16",
+          "ev_client_14"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          14,
+          29,
+          18,
+          15,
+          57,
+          83,
+          66,
+          83,
+          70,
+          77
+        ],
+        "successful_class_examples": [
+          14,
+          29,
+          18,
+          15,
+          57,
+          83,
+          66,
+          83,
+          70,
+          77
+        ],
+        "selected_class_mix_pct": [
+          2.734375,
+          5.6640625,
+          3.515625,
+          2.9296875,
+          11.1328125,
+          16.2109375,
+          12.890625,
+          16.2109375,
+          13.671875,
+          15.0390625
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          1.8,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          84.4660222530365,
+          86.51162981987,
+          51.70731544494629,
+          2.427184395492077,
+          70.37037014961243,
+          87.36842274665833,
+          87.22222447395325,
+          72.89719581604004,
+          88.99999856948853,
+          91.28205180168152
+        ],
+        "total_energy_kwh": 2.33503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 51,
+        "test_accuracy": 71.95000052452087,
+        "worst_class_accuracy": 2.427184395492077,
+        "heavy_class_accuracy": 85.55397868156433,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_04"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "successful_class_examples": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "selected_class_mix_pct": [
+          14.2578125,
+          18.359375,
+          10.15625,
+          17.1875,
+          15.234375,
+          3.7109375,
+          4.6875,
+          4.4921875,
+          8.7890625,
+          3.125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          84.4660222530365,
+          86.51162981987,
+          51.70731544494629,
+          2.427184395492077,
+          70.37037014961243,
+          87.36842274665833,
+          87.22222447395325,
+          72.89719581604004,
+          88.99999856948853,
+          91.28205180168152
+        ],
+        "total_energy_kwh": 2.38503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 52,
+        "test_accuracy": 71.95000052452087,
+        "worst_class_accuracy": 2.427184395492077,
+        "heavy_class_accuracy": 85.55397868156433,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_17"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          41,
+          64,
+          45,
+          81,
+          42,
+          34,
+          38,
+          39,
+          69,
+          59
+        ],
+        "successful_class_examples": [
+          41,
+          64,
+          45,
+          81,
+          42,
+          34,
+          38,
+          39,
+          69,
+          59
+        ],
+        "selected_class_mix_pct": [
+          8.0078125,
+          12.5,
+          8.7890625,
+          15.8203125,
+          8.203125,
+          6.640625,
+          7.421875,
+          7.6171875,
+          13.4765625,
+          11.5234375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          84.4660222530365,
+          86.51162981987,
+          51.70731544494629,
+          2.427184395492077,
+          70.37037014961243,
+          87.36842274665833,
+          87.22222447395325,
+          72.89719581604004,
+          88.99999856948853,
+          91.28205180168152
+        ],
+        "total_energy_kwh": 2.43503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 53,
+        "test_accuracy": 71.95000052452087,
+        "worst_class_accuracy": 2.427184395492077,
+        "heavy_class_accuracy": 85.55397868156433,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 8,
+        "eligible_pool_by_profile": {
+          "heavy-use": 4,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_14"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ],
+        "successful_class_examples": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ],
+        "selected_class_mix_pct": [
+          8.7890625,
+          9.765625,
+          7.8125,
+          11.328125,
+          8.0078125,
+          11.328125,
+          8.7890625,
+          7.8125,
+          14.0625,
+          12.3046875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          84.4660222530365,
+          86.51162981987,
+          51.70731544494629,
+          2.427184395492077,
+          70.37037014961243,
+          87.36842274665833,
+          87.22222447395325,
+          72.89719581604004,
+          88.99999856948853,
+          91.28205180168152
+        ],
+        "total_energy_kwh": 2.48503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 54,
+        "test_accuracy": 71.95000052452087,
+        "worst_class_accuracy": 2.427184395492077,
+        "heavy_class_accuracy": 85.55397868156433,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "successful_class_examples": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "selected_class_mix_pct": [
+          11.328125,
+          13.0859375,
+          16.6015625,
+          13.8671875,
+          16.6015625,
+          3.90625,
+          5.2734375,
+          8.59375,
+          6.4453125,
+          4.296875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          84.4660222530365,
+          86.51162981987,
+          51.70731544494629,
+          2.427184395492077,
+          70.37037014961243,
+          87.36842274665833,
+          87.22222447395325,
+          72.89719581604004,
+          88.99999856948853,
+          91.28205180168152
+        ],
+        "total_energy_kwh": 2.53503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 55,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_11",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ],
+        "successful_class_examples": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ],
+        "selected_class_mix_pct": [
+          10.7421875,
+          8.3984375,
+          16.796875,
+          4.4921875,
+          15.8203125,
+          6.4453125,
+          8.59375,
+          15.234375,
+          5.859375,
+          7.6171875
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.58503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 56,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 9,
+        "eligible_pool_by_profile": {
+          "heavy-use": 4,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_15",
+          "ev_client_18"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          74,
+          33,
+          53,
+          51,
+          42,
+          24,
+          92,
+          76,
+          25,
+          42
+        ],
+        "successful_class_examples": [
+          74,
+          33,
+          53,
+          51,
+          42,
+          24,
+          92,
+          76,
+          25,
+          42
+        ],
+        "selected_class_mix_pct": [
+          14.453125,
+          6.4453125,
+          10.3515625,
+          9.9609375,
+          8.203125,
+          4.6875,
+          17.96875,
+          14.84375,
+          4.8828125,
+          8.203125
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.63503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 57,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_09"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ],
+        "successful_class_examples": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ],
+        "selected_class_mix_pct": [
+          17.1875,
+          22.4609375,
+          14.453125,
+          19.140625,
+          11.1328125,
+          1.171875,
+          4.296875,
+          3.7109375,
+          5.46875,
+          0.9765625
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.68503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 58,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 1,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 0
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.68503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 59,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 1,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 0
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.68503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 60,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 0,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 0
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.6,
+          0.8,
+          0.8,
+          0.6,
+          0.8
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.68503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 61,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_00",
+          "ev_client_09"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          86,
+          105,
+          80,
+          74,
+          63,
+          11,
+          29,
+          19,
+          18,
+          27
+        ],
+        "successful_class_examples": [
+          86,
+          105,
+          80,
+          74,
+          63,
+          11,
+          29,
+          19,
+          18,
+          27
+        ],
+        "selected_class_mix_pct": [
+          16.796875,
+          20.5078125,
+          15.625,
+          14.453125,
+          12.3046875,
+          2.1484375,
+          5.6640625,
+          3.7109375,
+          3.515625,
+          5.2734375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.73503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 62,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_18"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ],
+        "selected_class_examples": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ],
+        "successful_class_examples": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ],
+        "selected_class_mix_pct": [
+          16.6015625,
+          12.6953125,
+          14.2578125,
+          21.484375,
+          14.6484375,
+          2.9296875,
+          9.9609375,
+          3.125,
+          3.7109375,
+          0.5859375
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.78503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 63,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 0,
+        "successful_count": 0,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 0,
+        "eligible_count": 1,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 1
+        },
+        "selected_clients": [],
+        "expected_survivors": 0.0,
+        "class_coverage": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful_class_examples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_class_mix_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.78503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 64,
+        "test_accuracy": 85.39999723434448,
+        "worst_class_accuracy": 56.00000023841858,
+        "heavy_class_accuracy": 77.77666211128235,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "successful_class_examples": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "selected_class_mix_pct": [
+          11.328125,
+          13.0859375,
+          16.6015625,
+          13.8671875,
+          16.6015625,
+          3.90625,
+          5.2734375,
+          8.59375,
+          6.4453125,
+          4.296875
+        ],
+        "class_coverage_window": null,
+        "evaluated": false,
+        "per_class_accuracy": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ],
+        "total_energy_kwh": 2.83503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 65,
+        "test_accuracy": 84.0499997138977,
+        "worst_class_accuracy": 56.49999976158142,
+        "heavy_class_accuracy": 73.89482259750366,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 2,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_00",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          53,
+          65,
+          98,
+          58,
+          92,
+          21,
+          32,
+          40,
+          16,
+          37
+        ],
+        "successful_class_examples": [
+          53,
+          65,
+          98,
+          58,
+          92,
+          21,
+          32,
+          40,
+          16,
+          37
+        ],
+        "selected_class_mix_pct": [
+          10.3515625,
+          12.6953125,
+          19.140625,
+          11.328125,
+          17.96875,
+          4.1015625,
+          6.25,
+          7.8125,
+          3.125,
+          7.2265625
+        ],
+        "class_coverage_window": [
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.4,
+          1.6,
+          1.6,
+          1.4,
+          1.6
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          95.63106894493103,
+          97.67441749572754,
+          93.17073225975037,
+          91.7475700378418,
+          89.94709253311157,
+          61.052632331848145,
+          83.88888835906982,
+          85.98130941390991,
+          56.49999976158142,
+          82.05128312110901
+        ],
+        "total_energy_kwh": 2.88503,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 66,
+        "test_accuracy": 88.80000114440918,
+        "worst_class_accuracy": 76.84210538864136,
+        "heavy_class_accuracy": 84.86645698547363,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_11",
+          "ev_client_00"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          66,
+          36,
+          84,
+          45,
+          81,
+          34,
+          30,
+          54,
+          32,
+          50
+        ],
+        "successful_class_examples": [
+          66,
+          36,
+          84,
+          45,
+          81,
+          34,
+          30,
+          54,
+          32,
+          50
+        ],
+        "selected_class_mix_pct": [
+          12.890625,
+          7.03125,
+          16.40625,
+          8.7890625,
+          15.8203125,
+          6.640625,
+          5.859375,
+          10.546875,
+          6.25,
+          9.765625
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          99.51456189155579,
+          97.20930457115173,
+          86.82926893234253,
+          89.3203854560852,
+          89.41798806190491,
+          76.84210538864136,
+          91.66666865348816,
+          88.78504633903503,
+          85.50000190734863,
+          81.53846263885498
+        ],
+        "total_energy_kwh": 2.93504,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 67,
+        "test_accuracy": 88.80000114440918,
+        "worst_class_accuracy": 76.84210538864136,
+        "heavy_class_accuracy": 84.86645698547363,
+        "selected_count": 2,
+        "successful_count": 1,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 1,
+        "eligible_count": 3,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 1
+        },
+        "selected_clients": [
+          "ev_client_02",
+          "ev_client_14"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          10,
+          29,
+          57,
+          32,
+          12,
+          80,
+          63,
+          71,
+          71,
+          87
+        ],
+        "successful_class_examples": [
+          8,
+          19,
+          5,
+          5,
+          2,
+          48,
+          41,
+          28,
+          46,
+          54
+        ],
+        "selected_class_mix_pct": [
+          1.953125,
+          5.6640625,
+          11.1328125,
+          6.25,
+          2.34375,
+          15.625,
+          12.3046875,
+          13.8671875,
+          13.8671875,
+          16.9921875
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          99.51456189155579,
+          97.20930457115173,
+          86.82926893234253,
+          89.3203854560852,
+          89.41798806190491,
+          76.84210538864136,
+          91.66666865348816,
+          88.78504633903503,
+          85.50000190734863,
+          81.53846263885498
+        ],
+        "total_energy_kwh": 2.97004,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 68,
+        "test_accuracy": 85.35000085830688,
+        "worst_class_accuracy": 57.43589997291565,
+        "heavy_class_accuracy": 75.43468475341797,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_05"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "successful_class_examples": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "selected_class_mix_pct": [
+          11.328125,
+          13.0859375,
+          16.6015625,
+          13.8671875,
+          16.6015625,
+          3.90625,
+          5.2734375,
+          8.59375,
+          6.4453125,
+          4.296875
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          94.6601927280426,
+          97.67441749572754,
+          91.70731902122498,
+          93.68932247161865,
+          96.29629850387573,
+          74.210524559021,
+          86.11111044883728,
+          86.91588640213013,
+          72.50000238418579,
+          57.43589997291565
+        ],
+        "total_energy_kwh": 3.02004,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 69,
+        "test_accuracy": 86.04999780654907,
+        "worst_class_accuracy": 58.42105150222778,
+        "heavy_class_accuracy": 77.61301398277283,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 9,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 7
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_09"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          91,
+          107,
+          67,
+          87,
+          56,
+          10,
+          24,
+          23,
+          35,
+          12
+        ],
+        "successful_class_examples": [
+          91,
+          107,
+          67,
+          87,
+          56,
+          10,
+          24,
+          23,
+          35,
+          12
+        ],
+        "selected_class_mix_pct": [
+          17.7734375,
+          20.8984375,
+          13.0859375,
+          16.9921875,
+          10.9375,
+          1.953125,
+          4.6875,
+          4.4921875,
+          6.8359375,
+          2.34375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          1.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          99.02912378311157,
+          98.13953638076782,
+          84.87805128097534,
+          93.20388436317444,
+          94.70899701118469,
+          58.42105150222778,
+          89.99999761581421,
+          88.78504633903503,
+          76.49999856948853,
+          74.35897588729858
+        ],
+        "total_energy_kwh": 3.07004,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 70,
+        "test_accuracy": 84.3999981880188,
+        "worst_class_accuracy": 50.999999046325684,
+        "heavy_class_accuracy": 72.95692563056946,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_09",
+          "ev_client_10"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ],
+        "successful_class_examples": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ],
+        "selected_class_mix_pct": [
+          15.4296875,
+          24.0234375,
+          11.9140625,
+          17.1875,
+          7.2265625,
+          2.9296875,
+          6.8359375,
+          9.1796875,
+          2.5390625,
+          2.734375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          1.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          96.60193920135498,
+          98.13953638076782,
+          92.68292784690857,
+          95.14563083648682,
+          93.65079402923584,
+          62.631577253341675,
+          89.4444465637207,
+          92.99065470695496,
+          50.999999046325684,
+          68.71795058250427
+        ],
+        "total_energy_kwh": 3.12004,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 71,
+        "test_accuracy": 84.20000076293945,
+        "worst_class_accuracy": 47.179487347602844,
+        "heavy_class_accuracy": 77.11052238941193,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_04"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "successful_class_examples": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "selected_class_mix_pct": [
+          14.2578125,
+          18.359375,
+          10.15625,
+          17.1875,
+          15.234375,
+          3.7109375,
+          4.6875,
+          4.4921875,
+          8.7890625,
+          3.125
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          99.02912378311157,
+          93.95349025726318,
+          75.60975551605225,
+          89.3203854560852,
+          96.82539701461792,
+          68.94736886024475,
+          89.4444465637207,
+          85.98130941390991,
+          93.99999976158142,
+          47.179487347602844
+        ],
+        "total_energy_kwh": 3.17004,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 72,
+        "test_accuracy": 80.84999918937683,
+        "worst_class_accuracy": 23.499999940395355,
+        "heavy_class_accuracy": 70.50559252500534,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 6,
+        "eligible_pool_by_profile": {
+          "heavy-use": 3,
+          "light-use": 3
+        },
+        "selected_clients": [
+          "ev_client_02",
+          "ev_client_07"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          36,
+          49,
+          94,
+          91,
+          50,
+          38,
+          24,
+          51,
+          44,
+          35
+        ],
+        "successful_class_examples": [
+          36,
+          49,
+          94,
+          91,
+          50,
+          38,
+          24,
+          51,
+          44,
+          35
+        ],
+        "selected_class_mix_pct": [
+          7.03125,
+          9.5703125,
+          18.359375,
+          17.7734375,
+          9.765625,
+          7.421875,
+          4.6875,
+          9.9609375,
+          8.59375,
+          6.8359375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          94.6601927280426,
+          95.34883499145508,
+          96.09755873680115,
+          82.03883767127991,
+          85.18518805503845,
+          79.47368621826172,
+          76.66666507720947,
+          88.78504633903503,
+          23.499999940395355,
+          84.10256505012512
+        ],
+        "total_energy_kwh": 3.22004,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 73,
+        "test_accuracy": 80.84999918937683,
+        "worst_class_accuracy": 23.499999940395355,
+        "heavy_class_accuracy": 70.50559252500534,
+        "selected_count": 2,
+        "successful_count": 1,
+        "aggregated_client_count": 0,
+        "peer_pairs_merged": 0,
+        "wasted_client_rounds": 1,
+        "eligible_count": 4,
+        "eligible_pool_by_profile": {
+          "heavy-use": 2,
+          "light-use": 2
+        },
+        "selected_clients": [
+          "ev_client_07",
+          "ev_client_02"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          36,
+          49,
+          94,
+          91,
+          50,
+          38,
+          24,
+          51,
+          44,
+          35
+        ],
+        "successful_class_examples": [
+          34,
+          39,
+          42,
+          64,
+          40,
+          6,
+          2,
+          8,
+          19,
+          2
+        ],
+        "selected_class_mix_pct": [
+          7.03125,
+          9.5703125,
+          18.359375,
+          17.7734375,
+          9.765625,
+          7.421875,
+          4.6875,
+          9.9609375,
+          8.59375,
+          6.8359375
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          94.6601927280426,
+          95.34883499145508,
+          96.09755873680115,
+          82.03883767127991,
+          85.18518805503845,
+          79.47368621826172,
+          76.66666507720947,
+          88.78504633903503,
+          23.499999940395355,
+          84.10256505012512
+        ],
+        "total_energy_kwh": 3.25504,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 74,
+        "test_accuracy": 82.95000195503235,
+        "worst_class_accuracy": 53.658539056777954,
+        "heavy_class_accuracy": 80.21228194236755,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 1,
+          "light-use": 4
+        },
+        "selected_clients": [
+          "ev_client_00",
+          "ev_client_16"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          38,
+          39,
+          61,
+          50,
+          101,
+          46,
+          34,
+          63,
+          33,
+          47
+        ],
+        "successful_class_examples": [
+          38,
+          39,
+          61,
+          50,
+          101,
+          46,
+          34,
+          63,
+          33,
+          47
+        ],
+        "selected_class_mix_pct": [
+          7.421875,
+          7.6171875,
+          11.9140625,
+          9.765625,
+          19.7265625,
+          8.984375,
+          6.640625,
+          12.3046875,
+          6.4453125,
+          9.1796875
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          97.0873773097992,
+          95.81395387649536,
+          53.658539056777954,
+          83.98058414459229,
+          97.35449552536011,
+          66.84210300445557,
+          92.77777671813965,
+          86.91588640213013,
+          93.50000023841858,
+          61.02564334869385
+        ],
+        "total_energy_kwh": 3.30504,
+        "metered_mb": 0.0
+      },
+      {
+        "round": 75,
+        "test_accuracy": 85.69999933242798,
+        "worst_class_accuracy": 63.684213161468506,
+        "heavy_class_accuracy": 76.81226372718811,
+        "selected_count": 2,
+        "successful_count": 2,
+        "aggregated_client_count": 1,
+        "peer_pairs_merged": 1,
+        "wasted_client_rounds": 0,
+        "eligible_count": 5,
+        "eligible_pool_by_profile": {
+          "heavy-use": 0,
+          "light-use": 5
+        },
+        "selected_clients": [
+          "ev_client_01",
+          "ev_client_12"
+        ],
+        "expected_survivors": 2.0,
+        "class_coverage": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_class_examples": [
+          62,
+          70,
+          56,
+          78,
+          64,
+          58,
+          16,
+          19,
+          58,
+          31
+        ],
+        "successful_class_examples": [
+          62,
+          70,
+          56,
+          78,
+          64,
+          58,
+          16,
+          19,
+          58,
+          31
+        ],
+        "selected_class_mix_pct": [
+          12.109375,
+          13.671875,
+          10.9375,
+          15.234375,
+          12.5,
+          11.328125,
+          3.125,
+          3.7109375,
+          11.328125,
+          6.0546875
+        ],
+        "class_coverage_window": [
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0,
+          2.0
+        ],
+        "evaluated": true,
+        "per_class_accuracy": [
+          97.57281541824341,
+          98.13953638076782,
+          93.65853667259216,
+          94.17475461959839,
+          86.77248954772949,
+          63.684213161468506,
+          86.11111044883728,
+          84.112149477005,
+          63.999998569488525,
+          86.15384697914124
+        ],
+        "total_energy_kwh": 3.35504,
+        "metered_mb": 0.0
+      }
+    ],
+    "fleet_profiles": {
+      "ev_client_00": "light-use",
+      "ev_client_01": "light-use",
+      "ev_client_02": "heavy-use",
+      "ev_client_03": "light-use",
+      "ev_client_04": "light-use",
+      "ev_client_05": "light-use",
+      "ev_client_06": "heavy-use",
+      "ev_client_07": "light-use",
+      "ev_client_08": "heavy-use",
+      "ev_client_09": "light-use",
+      "ev_client_10": "light-use",
+      "ev_client_11": "heavy-use",
+      "ev_client_12": "light-use",
+      "ev_client_13": "heavy-use",
+      "ev_client_14": "heavy-use",
+      "ev_client_15": "heavy-use",
+      "ev_client_16": "heavy-use",
+      "ev_client_17": "heavy-use",
+      "ev_client_18": "light-use",
+      "ev_client_19": "heavy-use"
+    },
+    "participation_profile_summary": {
+      "heavy-use": {
+        "mean": 4.5,
+        "counts": {
+          "ev_client_02": 6,
+          "ev_client_06": 4,
+          "ev_client_08": 5,
+          "ev_client_11": 7,
+          "ev_client_13": 1,
+          "ev_client_14": 8,
+          "ev_client_15": 3,
+          "ev_client_16": 2,
+          "ev_client_17": 4,
+          "ev_client_19": 5
+        }
+      },
+      "light-use": {
+        "mean": 9.1,
+        "counts": {
+          "ev_client_00": 10,
+          "ev_client_01": 13,
+          "ev_client_03": 5,
+          "ev_client_04": 9,
+          "ev_client_05": 9,
+          "ev_client_07": 16,
+          "ev_client_09": 9,
+          "ev_client_10": 6,
+          "ev_client_12": 6,
+          "ev_client_18": 8
+        }
+      }
+    },
+    "telemetry_summary": {
+      "total_compute_energy_kwh": 3.355,
+      "total_transfer_energy_kwh": 4e-05,
+      "total_energy_kwh": 3.35504,
+      "total_metered_mb": 0.0,
+      "total_unmetered_mb": 108.63,
+      "total_dropouts": 3
+    },
+    "eligible_pool_by_profile_by_round": [
+      {
+        "round": 1,
+        "heavy-use": 2,
+        "light-use": 0
+      },
+      {
+        "round": 2,
+        "heavy-use": 1,
+        "light-use": 5
+      },
+      {
+        "round": 3,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 4,
+        "heavy-use": 3,
+        "light-use": 2
+      },
+      {
+        "round": 5,
+        "heavy-use": 3,
+        "light-use": 0
+      },
+      {
+        "round": 6,
+        "heavy-use": 2,
+        "light-use": 0
+      },
+      {
+        "round": 7,
+        "heavy-use": 3,
+        "light-use": 2
+      },
+      {
+        "round": 8,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 9,
+        "heavy-use": 2,
+        "light-use": 2
+      },
+      {
+        "round": 10,
+        "heavy-use": 0,
+        "light-use": 3
+      },
+      {
+        "round": 11,
+        "heavy-use": 0,
+        "light-use": 5
+      },
+      {
+        "round": 12,
+        "heavy-use": 2,
+        "light-use": 4
+      },
+      {
+        "round": 13,
+        "heavy-use": 3,
+        "light-use": 4
+      },
+      {
+        "round": 14,
+        "heavy-use": 2,
+        "light-use": 3
+      },
+      {
+        "round": 15,
+        "heavy-use": 1,
+        "light-use": 2
+      },
+      {
+        "round": 16,
+        "heavy-use": 1,
+        "light-use": 0
+      },
+      {
+        "round": 17,
+        "heavy-use": 1,
+        "light-use": 0
+      },
+      {
+        "round": 18,
+        "heavy-use": 2,
+        "light-use": 4
+      },
+      {
+        "round": 19,
+        "heavy-use": 1,
+        "light-use": 4
+      },
+      {
+        "round": 20,
+        "heavy-use": 0,
+        "light-use": 3
+      },
+      {
+        "round": 21,
+        "heavy-use": 2,
+        "light-use": 4
+      },
+      {
+        "round": 22,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 23,
+        "heavy-use": 3,
+        "light-use": 4
+      },
+      {
+        "round": 24,
+        "heavy-use": 1,
+        "light-use": 5
+      },
+      {
+        "round": 25,
+        "heavy-use": 2,
+        "light-use": 4
+      },
+      {
+        "round": 26,
+        "heavy-use": 0,
+        "light-use": 2
+      },
+      {
+        "round": 27,
+        "heavy-use": 1,
+        "light-use": 2
+      },
+      {
+        "round": 28,
+        "heavy-use": 1,
+        "light-use": 6
+      },
+      {
+        "round": 29,
+        "heavy-use": 1,
+        "light-use": 5
+      },
+      {
+        "round": 30,
+        "heavy-use": 0,
+        "light-use": 6
+      },
+      {
+        "round": 31,
+        "heavy-use": 1,
+        "light-use": 4
+      },
+      {
+        "round": 32,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 33,
+        "heavy-use": 2,
+        "light-use": 3
+      },
+      {
+        "round": 34,
+        "heavy-use": 3,
+        "light-use": 3
+      },
+      {
+        "round": 35,
+        "heavy-use": 2,
+        "light-use": 5
+      },
+      {
+        "round": 36,
+        "heavy-use": 1,
+        "light-use": 6
+      },
+      {
+        "round": 37,
+        "heavy-use": 1,
+        "light-use": 0
+      },
+      {
+        "round": 38,
+        "heavy-use": 2,
+        "light-use": 1
+      },
+      {
+        "round": 39,
+        "heavy-use": 3,
+        "light-use": 5
+      },
+      {
+        "round": 40,
+        "heavy-use": 3,
+        "light-use": 5
+      },
+      {
+        "round": 41,
+        "heavy-use": 1,
+        "light-use": 2
+      },
+      {
+        "round": 42,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 43,
+        "heavy-use": 2,
+        "light-use": 2
+      },
+      {
+        "round": 44,
+        "heavy-use": 3,
+        "light-use": 2
+      },
+      {
+        "round": 45,
+        "heavy-use": 3,
+        "light-use": 5
+      },
+      {
+        "round": 46,
+        "heavy-use": 2,
+        "light-use": 2
+      },
+      {
+        "round": 47,
+        "heavy-use": 2,
+        "light-use": 3
+      },
+      {
+        "round": 48,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 49,
+        "heavy-use": 3,
+        "light-use": 2
+      },
+      {
+        "round": 50,
+        "heavy-use": 2,
+        "light-use": 0
+      },
+      {
+        "round": 51,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 52,
+        "heavy-use": 3,
+        "light-use": 3
+      },
+      {
+        "round": 53,
+        "heavy-use": 4,
+        "light-use": 4
+      },
+      {
+        "round": 54,
+        "heavy-use": 2,
+        "light-use": 3
+      },
+      {
+        "round": 55,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 56,
+        "heavy-use": 4,
+        "light-use": 5
+      },
+      {
+        "round": 57,
+        "heavy-use": 1,
+        "light-use": 2
+      },
+      {
+        "round": 58,
+        "heavy-use": 1,
+        "light-use": 0
+      },
+      {
+        "round": 59,
+        "heavy-use": 1,
+        "light-use": 0
+      },
+      {
+        "round": 60,
+        "heavy-use": 0,
+        "light-use": 0
+      },
+      {
+        "round": 61,
+        "heavy-use": 0,
+        "light-use": 4
+      },
+      {
+        "round": 62,
+        "heavy-use": 1,
+        "light-use": 2
+      },
+      {
+        "round": 63,
+        "heavy-use": 0,
+        "light-use": 1
+      },
+      {
+        "round": 64,
+        "heavy-use": 1,
+        "light-use": 3
+      },
+      {
+        "round": 65,
+        "heavy-use": 0,
+        "light-use": 2
+      },
+      {
+        "round": 66,
+        "heavy-use": 2,
+        "light-use": 2
+      },
+      {
+        "round": 67,
+        "heavy-use": 2,
+        "light-use": 1
+      },
+      {
+        "round": 68,
+        "heavy-use": 2,
+        "light-use": 3
+      },
+      {
+        "round": 69,
+        "heavy-use": 2,
+        "light-use": 7
+      },
+      {
+        "round": 70,
+        "heavy-use": 0,
+        "light-use": 5
+      },
+      {
+        "round": 71,
+        "heavy-use": 2,
+        "light-use": 2
+      },
+      {
+        "round": 72,
+        "heavy-use": 3,
+        "light-use": 3
+      },
+      {
+        "round": 73,
+        "heavy-use": 2,
+        "light-use": 2
+      },
+      {
+        "round": 74,
+        "heavy-use": 1,
+        "light-use": 4
+      },
+      {
+        "round": 75,
+        "heavy-use": 0,
+        "light-use": 5
+      }
+    ],
+    "selected_training_example_mass_by_class_by_round": [
+      {
+        "round": 1,
+        "selected": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ],
+        "successful": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ]
+      },
+      {
+        "round": 2,
+        "selected": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ],
+        "successful": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ]
+      },
+      {
+        "round": 3,
+        "selected": [
+          88,
+          83,
+          68,
+          39,
+          52,
+          23,
+          41,
+          57,
+          32,
+          29
+        ],
+        "successful": [
+          88,
+          83,
+          68,
+          39,
+          52,
+          23,
+          41,
+          57,
+          32,
+          29
+        ]
+      },
+      {
+        "round": 4,
+        "selected": [
+          57,
+          14,
+          58,
+          10,
+          42,
+          38,
+          64,
+          114,
+          48,
+          67
+        ],
+        "successful": [
+          57,
+          14,
+          58,
+          10,
+          42,
+          38,
+          64,
+          114,
+          48,
+          67
+        ]
+      },
+      {
+        "round": 5,
+        "selected": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ],
+        "successful": [
+          15,
+          20,
+          18,
+          64,
+          13,
+          63,
+          93,
+          76,
+          75,
+          75
+        ]
+      },
+      {
+        "round": 6,
+        "selected": [
+          15,
+          45,
+          21,
+          51,
+          7,
+          63,
+          80,
+          69,
+          83,
+          78
+        ],
+        "successful": [
+          15,
+          45,
+          21,
+          51,
+          7,
+          63,
+          80,
+          69,
+          83,
+          78
+        ]
+      },
+      {
+        "round": 7,
+        "selected": [
+          14,
+          22,
+          13,
+          30,
+          7,
+          69,
+          95,
+          77,
+          112,
+          73
+        ],
+        "successful": [
+          14,
+          22,
+          13,
+          30,
+          7,
+          69,
+          95,
+          77,
+          112,
+          73
+        ]
+      },
+      {
+        "round": 8,
+        "selected": [
+          56,
+          86,
+          84,
+          61,
+          27,
+          32,
+          42,
+          54,
+          34,
+          36
+        ],
+        "successful": [
+          56,
+          86,
+          84,
+          61,
+          27,
+          32,
+          42,
+          54,
+          34,
+          36
+        ]
+      },
+      {
+        "round": 9,
+        "selected": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ],
+        "successful": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ]
+      },
+      {
+        "round": 10,
+        "selected": [
+          90,
+          139,
+          49,
+          69,
+          56,
+          9,
+          40,
+          22,
+          28,
+          10
+        ],
+        "successful": [
+          90,
+          139,
+          49,
+          69,
+          56,
+          9,
+          40,
+          22,
+          28,
+          10
+        ]
+      },
+      {
+        "round": 11,
+        "selected": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "successful": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ]
+      },
+      {
+        "round": 12,
+        "selected": [
+          59,
+          78,
+          63,
+          89,
+          65,
+          54,
+          14,
+          15,
+          51,
+          24
+        ],
+        "successful": [
+          59,
+          78,
+          63,
+          89,
+          65,
+          54,
+          14,
+          15,
+          51,
+          24
+        ]
+      },
+      {
+        "round": 13,
+        "selected": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ],
+        "successful": [
+          34,
+          39,
+          100,
+          67,
+          56,
+          43,
+          31,
+          51,
+          34,
+          57
+        ]
+      },
+      {
+        "round": 14,
+        "selected": [
+          54,
+          58,
+          43,
+          50,
+          58,
+          42,
+          68,
+          55,
+          44,
+          40
+        ],
+        "successful": [
+          54,
+          58,
+          43,
+          50,
+          58,
+          42,
+          68,
+          55,
+          44,
+          40
+        ]
+      },
+      {
+        "round": 15,
+        "selected": [
+          59,
+          46,
+          57,
+          30,
+          60,
+          71,
+          33,
+          53,
+          55,
+          48
+        ],
+        "successful": [
+          59,
+          46,
+          57,
+          30,
+          60,
+          71,
+          33,
+          53,
+          55,
+          48
+        ]
+      },
+      {
+        "round": 16,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 17,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 18,
+        "selected": [
+          55,
+          75,
+          92,
+          82,
+          86,
+          16,
+          25,
+          40,
+          26,
+          15
+        ],
+        "successful": [
+          55,
+          75,
+          92,
+          82,
+          86,
+          16,
+          25,
+          40,
+          26,
+          15
+        ]
+      },
+      {
+        "round": 19,
+        "selected": [
+          72,
+          62,
+          81,
+          64,
+          81,
+          19,
+          72,
+          40,
+          7,
+          14
+        ],
+        "successful": [
+          72,
+          62,
+          81,
+          64,
+          81,
+          19,
+          72,
+          40,
+          7,
+          14
+        ]
+      },
+      {
+        "round": 20,
+        "selected": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ],
+        "successful": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ]
+      },
+      {
+        "round": 21,
+        "selected": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ],
+        "successful": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ]
+      },
+      {
+        "round": 22,
+        "selected": [
+          68,
+          46,
+          78,
+          69,
+          75,
+          29,
+          23,
+          54,
+          42,
+          28
+        ],
+        "successful": [
+          68,
+          46,
+          78,
+          69,
+          75,
+          29,
+          23,
+          54,
+          42,
+          28
+        ]
+      },
+      {
+        "round": 23,
+        "selected": [
+          76,
+          73,
+          60,
+          100,
+          55,
+          24,
+          64,
+          44,
+          4,
+          12
+        ],
+        "successful": [
+          76,
+          73,
+          60,
+          100,
+          55,
+          24,
+          64,
+          44,
+          4,
+          12
+        ]
+      },
+      {
+        "round": 24,
+        "selected": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ],
+        "successful": [
+          88,
+          57,
+          66,
+          99,
+          74,
+          19,
+          53,
+          20,
+          26,
+          10
+        ]
+      },
+      {
+        "round": 25,
+        "selected": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ],
+        "successful": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ]
+      },
+      {
+        "round": 26,
+        "selected": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ],
+        "successful": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ]
+      },
+      {
+        "round": 27,
+        "selected": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ],
+        "successful": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ]
+      },
+      {
+        "round": 28,
+        "selected": [
+          64,
+          82,
+          82,
+          45,
+          100,
+          13,
+          45,
+          45,
+          11,
+          25
+        ],
+        "successful": [
+          64,
+          82,
+          82,
+          45,
+          100,
+          13,
+          45,
+          45,
+          11,
+          25
+        ]
+      },
+      {
+        "round": 29,
+        "selected": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ],
+        "successful": [
+          61,
+          102,
+          38,
+          60,
+          64,
+          57,
+          32,
+          18,
+          51,
+          29
+        ]
+      },
+      {
+        "round": 30,
+        "selected": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ],
+        "successful": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ]
+      },
+      {
+        "round": 31,
+        "selected": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ],
+        "successful": [
+          66,
+          68,
+          90,
+          104,
+          86,
+          17,
+          11,
+          16,
+          28,
+          26
+        ]
+      },
+      {
+        "round": 32,
+        "selected": [
+          29,
+          55,
+          36,
+          95,
+          29,
+          39,
+          62,
+          70,
+          39,
+          58
+        ],
+        "successful": [
+          29,
+          55,
+          36,
+          95,
+          29,
+          39,
+          62,
+          70,
+          39,
+          58
+        ]
+      },
+      {
+        "round": 33,
+        "selected": [
+          59,
+          86,
+          71,
+          118,
+          60,
+          21,
+          17,
+          44,
+          23,
+          13
+        ],
+        "successful": [
+          59,
+          86,
+          71,
+          118,
+          60,
+          21,
+          17,
+          44,
+          23,
+          13
+        ]
+      },
+      {
+        "round": 34,
+        "selected": [
+          35,
+          39,
+          50,
+          47,
+          49,
+          41,
+          58,
+          43,
+          81,
+          69
+        ],
+        "successful": [
+          35,
+          39,
+          50,
+          47,
+          49,
+          41,
+          58,
+          43,
+          81,
+          69
+        ]
+      },
+      {
+        "round": 35,
+        "selected": [
+          55,
+          36,
+          70,
+          45,
+          53,
+          26,
+          52,
+          76,
+          34,
+          65
+        ],
+        "successful": [
+          55,
+          36,
+          70,
+          45,
+          53,
+          26,
+          52,
+          76,
+          34,
+          65
+        ]
+      },
+      {
+        "round": 36,
+        "selected": [
+          94,
+          72,
+          63,
+          73,
+          89,
+          12,
+          71,
+          21,
+          4,
+          13
+        ],
+        "successful": [
+          94,
+          72,
+          63,
+          73,
+          89,
+          12,
+          71,
+          21,
+          4,
+          13
+        ]
+      },
+      {
+        "round": 37,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 38,
+        "selected": [
+          29,
+          72,
+          31,
+          53,
+          28,
+          72,
+          46,
+          34,
+          75,
+          72
+        ],
+        "successful": [
+          29,
+          72,
+          31,
+          53,
+          28,
+          72,
+          46,
+          34,
+          75,
+          72
+        ]
+      },
+      {
+        "round": 39,
+        "selected": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ],
+        "successful": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ]
+      },
+      {
+        "round": 40,
+        "selected": [
+          12,
+          27,
+          12,
+          46,
+          11,
+          72,
+          88,
+          62,
+          81,
+          101
+        ],
+        "successful": [
+          12,
+          27,
+          12,
+          46,
+          11,
+          72,
+          88,
+          62,
+          81,
+          101
+        ]
+      },
+      {
+        "round": 41,
+        "selected": [
+          42,
+          58,
+          47,
+          69,
+          42,
+          54,
+          43,
+          36,
+          65,
+          56
+        ],
+        "successful": [
+          42,
+          58,
+          47,
+          69,
+          42,
+          54,
+          43,
+          36,
+          65,
+          56
+        ]
+      },
+      {
+        "round": 42,
+        "selected": [
+          29,
+          80,
+          39,
+          82,
+          23,
+          39,
+          49,
+          63,
+          47,
+          61
+        ],
+        "successful": [
+          29,
+          80,
+          39,
+          82,
+          23,
+          39,
+          49,
+          63,
+          47,
+          61
+        ]
+      },
+      {
+        "round": 43,
+        "selected": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ],
+        "successful": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ]
+      },
+      {
+        "round": 44,
+        "selected": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ],
+        "successful": [
+          11,
+          29,
+          7,
+          12,
+          5,
+          78,
+          90,
+          63,
+          118,
+          99
+        ]
+      },
+      {
+        "round": 45,
+        "selected": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ],
+        "successful": [
+          79,
+          109,
+          49,
+          62,
+          93,
+          12,
+          42,
+          24,
+          23,
+          19
+        ]
+      },
+      {
+        "round": 46,
+        "selected": [
+          70,
+          102,
+          59,
+          99,
+          79,
+          15,
+          22,
+          19,
+          38,
+          9
+        ],
+        "successful": [
+          70,
+          102,
+          59,
+          99,
+          79,
+          15,
+          22,
+          19,
+          38,
+          9
+        ]
+      },
+      {
+        "round": 47,
+        "selected": [
+          37,
+          49,
+          44,
+          71,
+          43,
+          36,
+          51,
+          43,
+          91,
+          47
+        ],
+        "successful": [
+          37,
+          49,
+          44,
+          71,
+          43,
+          36,
+          51,
+          43,
+          91,
+          47
+        ]
+      },
+      {
+        "round": 48,
+        "selected": [
+          60,
+          51,
+          50,
+          67,
+          45,
+          58,
+          26,
+          55,
+          64,
+          36
+        ],
+        "successful": [
+          34,
+          39,
+          42,
+          64,
+          40,
+          6,
+          2,
+          8,
+          19,
+          2
+        ]
+      },
+      {
+        "round": 49,
+        "selected": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ],
+        "successful": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ]
+      },
+      {
+        "round": 50,
+        "selected": [
+          14,
+          29,
+          18,
+          15,
+          57,
+          83,
+          66,
+          83,
+          70,
+          77
+        ],
+        "successful": [
+          14,
+          29,
+          18,
+          15,
+          57,
+          83,
+          66,
+          83,
+          70,
+          77
+        ]
+      },
+      {
+        "round": 51,
+        "selected": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "successful": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ]
+      },
+      {
+        "round": 52,
+        "selected": [
+          41,
+          64,
+          45,
+          81,
+          42,
+          34,
+          38,
+          39,
+          69,
+          59
+        ],
+        "successful": [
+          41,
+          64,
+          45,
+          81,
+          42,
+          34,
+          38,
+          39,
+          69,
+          59
+        ]
+      },
+      {
+        "round": 53,
+        "selected": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ],
+        "successful": [
+          45,
+          50,
+          40,
+          58,
+          41,
+          58,
+          45,
+          40,
+          72,
+          63
+        ]
+      },
+      {
+        "round": 54,
+        "selected": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "successful": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ]
+      },
+      {
+        "round": 55,
+        "selected": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ],
+        "successful": [
+          55,
+          43,
+          86,
+          23,
+          81,
+          33,
+          44,
+          78,
+          30,
+          39
+        ]
+      },
+      {
+        "round": 56,
+        "selected": [
+          74,
+          33,
+          53,
+          51,
+          42,
+          24,
+          92,
+          76,
+          25,
+          42
+        ],
+        "successful": [
+          74,
+          33,
+          53,
+          51,
+          42,
+          24,
+          92,
+          76,
+          25,
+          42
+        ]
+      },
+      {
+        "round": 57,
+        "selected": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ],
+        "successful": [
+          88,
+          115,
+          74,
+          98,
+          57,
+          6,
+          22,
+          19,
+          28,
+          5
+        ]
+      },
+      {
+        "round": 58,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 59,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 60,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 61,
+        "selected": [
+          86,
+          105,
+          80,
+          74,
+          63,
+          11,
+          29,
+          19,
+          18,
+          27
+        ],
+        "successful": [
+          86,
+          105,
+          80,
+          74,
+          63,
+          11,
+          29,
+          19,
+          18,
+          27
+        ]
+      },
+      {
+        "round": 62,
+        "selected": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ],
+        "successful": [
+          85,
+          65,
+          73,
+          110,
+          75,
+          15,
+          51,
+          16,
+          19,
+          3
+        ]
+      },
+      {
+        "round": 63,
+        "selected": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "successful": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "round": 64,
+        "selected": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "successful": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ]
+      },
+      {
+        "round": 65,
+        "selected": [
+          53,
+          65,
+          98,
+          58,
+          92,
+          21,
+          32,
+          40,
+          16,
+          37
+        ],
+        "successful": [
+          53,
+          65,
+          98,
+          58,
+          92,
+          21,
+          32,
+          40,
+          16,
+          37
+        ]
+      },
+      {
+        "round": 66,
+        "selected": [
+          66,
+          36,
+          84,
+          45,
+          81,
+          34,
+          30,
+          54,
+          32,
+          50
+        ],
+        "successful": [
+          66,
+          36,
+          84,
+          45,
+          81,
+          34,
+          30,
+          54,
+          32,
+          50
+        ]
+      },
+      {
+        "round": 67,
+        "selected": [
+          10,
+          29,
+          57,
+          32,
+          12,
+          80,
+          63,
+          71,
+          71,
+          87
+        ],
+        "successful": [
+          8,
+          19,
+          5,
+          5,
+          2,
+          48,
+          41,
+          28,
+          46,
+          54
+        ]
+      },
+      {
+        "round": 68,
+        "selected": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ],
+        "successful": [
+          58,
+          67,
+          85,
+          71,
+          85,
+          20,
+          27,
+          44,
+          33,
+          22
+        ]
+      },
+      {
+        "round": 69,
+        "selected": [
+          91,
+          107,
+          67,
+          87,
+          56,
+          10,
+          24,
+          23,
+          35,
+          12
+        ],
+        "successful": [
+          91,
+          107,
+          67,
+          87,
+          56,
+          10,
+          24,
+          23,
+          35,
+          12
+        ]
+      },
+      {
+        "round": 70,
+        "selected": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ],
+        "successful": [
+          79,
+          123,
+          61,
+          88,
+          37,
+          15,
+          35,
+          47,
+          13,
+          14
+        ]
+      },
+      {
+        "round": 71,
+        "selected": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ],
+        "successful": [
+          73,
+          94,
+          52,
+          88,
+          78,
+          19,
+          24,
+          23,
+          45,
+          16
+        ]
+      },
+      {
+        "round": 72,
+        "selected": [
+          36,
+          49,
+          94,
+          91,
+          50,
+          38,
+          24,
+          51,
+          44,
+          35
+        ],
+        "successful": [
+          36,
+          49,
+          94,
+          91,
+          50,
+          38,
+          24,
+          51,
+          44,
+          35
+        ]
+      },
+      {
+        "round": 73,
+        "selected": [
+          36,
+          49,
+          94,
+          91,
+          50,
+          38,
+          24,
+          51,
+          44,
+          35
+        ],
+        "successful": [
+          34,
+          39,
+          42,
+          64,
+          40,
+          6,
+          2,
+          8,
+          19,
+          2
+        ]
+      },
+      {
+        "round": 74,
+        "selected": [
+          38,
+          39,
+          61,
+          50,
+          101,
+          46,
+          34,
+          63,
+          33,
+          47
+        ],
+        "successful": [
+          38,
+          39,
+          61,
+          50,
+          101,
+          46,
+          34,
+          63,
+          33,
+          47
+        ]
+      },
+      {
+        "round": 75,
+        "selected": [
+          62,
+          70,
+          56,
+          78,
+          64,
+          58,
+          16,
+          19,
+          58,
+          31
+        ],
+        "successful": [
+          62,
+          70,
+          56,
+          78,
+          64,
+          58,
+          16,
+          19,
+          58,
+          31
+        ]
+      }
+    ],
+    "per_class_accuracy_by_evaluated_round": [
+      {
+        "round": 5,
+        "accuracy_pct": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          97.22222089767456,
+          96.72897458076477,
+          28.00000011920929,
+          0.0
+        ]
+      },
+      {
+        "round": 10,
+        "accuracy_pct": [
+          81.5533995628357,
+          100.0,
+          79.5121967792511,
+          86.40776872634888,
+          0.0,
+          0.0,
+          65.55555462837219,
+          63.55140209197998,
+          2.500000037252903,
+          5.128205195069313
+        ]
+      },
+      {
+        "round": 15,
+        "accuracy_pct": [
+          89.3203854560852,
+          93.4883713722229,
+          95.12194991111755,
+          28.155338764190674,
+          85.71428656578064,
+          82.63157606124878,
+          25.0,
+          83.17757248878479,
+          21.50000035762787,
+          2.051282115280628
+        ]
+      },
+      {
+        "round": 20,
+        "accuracy_pct": [
+          72.81553149223328,
+          90.69767594337463,
+          38.53658437728882,
+          99.51456189155579,
+          94.70899701118469,
+          0.0,
+          8.888889104127884,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "round": 25,
+        "accuracy_pct": [
+          98.54369163513184,
+          99.06976819038391,
+          90.73171019554138,
+          83.49514603614807,
+          84.1269850730896,
+          11.052631586790085,
+          70.55555582046509,
+          89.71962332725525,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "round": 30,
+        "accuracy_pct": [
+          95.63106894493103,
+          97.20930457115173,
+          91.70731902122498,
+          65.5339777469635,
+          98.41269850730896,
+          28.421053290367126,
+          33.33333432674408,
+          74.29906725883484,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "round": 35,
+        "accuracy_pct": [
+          98.54369163513184,
+          95.34883499145508,
+          95.60975432395935,
+          68.93203854560852,
+          79.89417910575867,
+          51.05262994766235,
+          65.55555462837219,
+          94.85981464385986,
+          3.500000014901161,
+          20.000000298023224
+        ]
+      },
+      {
+        "round": 40,
+        "accuracy_pct": [
+          50.0,
+          83.25581550598145,
+          50.731706619262695,
+          57.76699185371399,
+          10.052909702062607,
+          50.0,
+          87.22222447395325,
+          65.887850522995,
+          97.00000286102295,
+          88.20512890815735
+        ]
+      },
+      {
+        "round": 45,
+        "accuracy_pct": [
+          98.54369163513184,
+          96.74418568611145,
+          88.78048658370972,
+          90.77669978141785,
+          97.35449552536011,
+          54.21052575111389,
+          83.88888835906982,
+          90.18691778182983,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "round": 50,
+        "accuracy_pct": [
+          84.4660222530365,
+          86.51162981987,
+          51.70731544494629,
+          2.427184395492077,
+          70.37037014961243,
+          87.36842274665833,
+          87.22222447395325,
+          72.89719581604004,
+          88.99999856948853,
+          91.28205180168152
+        ]
+      },
+      {
+        "round": 55,
+        "accuracy_pct": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ]
+      },
+      {
+        "round": 60,
+        "accuracy_pct": [
+          98.54369163513184,
+          96.27906680107117,
+          90.24389982223511,
+          91.7475700378418,
+          85.71428656578064,
+          79.47368621826172,
+          87.22222447395325,
+          94.39252614974976,
+          56.00000023841858,
+          71.79487347602844
+        ]
+      },
+      {
+        "round": 65,
+        "accuracy_pct": [
+          95.63106894493103,
+          97.67441749572754,
+          93.17073225975037,
+          91.7475700378418,
+          89.94709253311157,
+          61.052632331848145,
+          83.88888835906982,
+          85.98130941390991,
+          56.49999976158142,
+          82.05128312110901
+        ]
+      },
+      {
+        "round": 66,
+        "accuracy_pct": [
+          99.51456189155579,
+          97.20930457115173,
+          86.82926893234253,
+          89.3203854560852,
+          89.41798806190491,
+          76.84210538864136,
+          91.66666865348816,
+          88.78504633903503,
+          85.50000190734863,
+          81.53846263885498
+        ]
+      },
+      {
+        "round": 67,
+        "accuracy_pct": [
+          99.51456189155579,
+          97.20930457115173,
+          86.82926893234253,
+          89.3203854560852,
+          89.41798806190491,
+          76.84210538864136,
+          91.66666865348816,
+          88.78504633903503,
+          85.50000190734863,
+          81.53846263885498
+        ]
+      },
+      {
+        "round": 68,
+        "accuracy_pct": [
+          94.6601927280426,
+          97.67441749572754,
+          91.70731902122498,
+          93.68932247161865,
+          96.29629850387573,
+          74.210524559021,
+          86.11111044883728,
+          86.91588640213013,
+          72.50000238418579,
+          57.43589997291565
+        ]
+      },
+      {
+        "round": 69,
+        "accuracy_pct": [
+          99.02912378311157,
+          98.13953638076782,
+          84.87805128097534,
+          93.20388436317444,
+          94.70899701118469,
+          58.42105150222778,
+          89.99999761581421,
+          88.78504633903503,
+          76.49999856948853,
+          74.35897588729858
+        ]
+      },
+      {
+        "round": 70,
+        "accuracy_pct": [
+          96.60193920135498,
+          98.13953638076782,
+          92.68292784690857,
+          95.14563083648682,
+          93.65079402923584,
+          62.631577253341675,
+          89.4444465637207,
+          92.99065470695496,
+          50.999999046325684,
+          68.71795058250427
+        ]
+      },
+      {
+        "round": 71,
+        "accuracy_pct": [
+          99.02912378311157,
+          93.95349025726318,
+          75.60975551605225,
+          89.3203854560852,
+          96.82539701461792,
+          68.94736886024475,
+          89.4444465637207,
+          85.98130941390991,
+          93.99999976158142,
+          47.179487347602844
+        ]
+      },
+      {
+        "round": 72,
+        "accuracy_pct": [
+          94.6601927280426,
+          95.34883499145508,
+          96.09755873680115,
+          82.03883767127991,
+          85.18518805503845,
+          79.47368621826172,
+          76.66666507720947,
+          88.78504633903503,
+          23.499999940395355,
+          84.10256505012512
+        ]
+      },
+      {
+        "round": 73,
+        "accuracy_pct": [
+          94.6601927280426,
+          95.34883499145508,
+          96.09755873680115,
+          82.03883767127991,
+          85.18518805503845,
+          79.47368621826172,
+          76.66666507720947,
+          88.78504633903503,
+          23.499999940395355,
+          84.10256505012512
+        ]
+      },
+      {
+        "round": 74,
+        "accuracy_pct": [
+          97.0873773097992,
+          95.81395387649536,
+          53.658539056777954,
+          83.98058414459229,
+          97.35449552536011,
+          66.84210300445557,
+          92.77777671813965,
+          86.91588640213013,
+          93.50000023841858,
+          61.02564334869385
+        ]
+      },
+      {
+        "round": 75,
+        "accuracy_pct": [
+          97.57281541824341,
+          98.13953638076782,
+          93.65853667259216,
+          94.17475461959839,
+          86.77248954772949,
+          63.684213161468506,
+          86.11111044883728,
+          84.112149477005,
+          63.999998569488525,
+          86.15384697914124
+        ]
+      }
+    ],
+    "kind": "primary",
+    "sensitivity_parameter": null,
+    "sensitivity_value": null
+  }
+}

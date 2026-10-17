@@ -484,7 +484,10 @@ def generate_study_plots(data: dict, out_dir: str, rho: float = 1.0):
 def generate_final_plots(report: dict, out_dir: str, rho: float = 1.0):
     """Generate pre-registered final-run figures from seed-level output records."""
     os.makedirs(out_dir, exist_ok=True)
-    selected = [row for row in report["results"] if row["rho"] == rho]
+    selected = [
+        row for row in report["results"]
+        if row["rho"] == rho and row.get("kind") == "primary"
+    ]
     policies = list(dict.fromkeys(row["policy"] for row in selected))
     colors = {
         "A": "#d95f02", "B": "#1b9e77", "C": "#7570b3", "D": "#e7298a",
